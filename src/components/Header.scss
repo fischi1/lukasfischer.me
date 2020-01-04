@@ -1,0 +1,17 @@
+@import "./layout.scss";
+
+.navbar {
+    border-bottom: 1px solid white;
+}
+
+#header-title {
+    color: $white;
+    font-family: $headings-font-family;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5em;
+    background: linear-gradient(135deg, $grad-color-1 0%, $grad-color-2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

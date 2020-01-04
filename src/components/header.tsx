@@ -1,37 +1,22 @@
 import { Link } from "gatsby"
 import React, { FC } from "react"
+import { Navbar } from "react-bootstrap"
+import "./Header.scss"
 
 type Props = {
-    siteTitle: string
+    title: string
 }
 
-const Header: FC<Props> = ({ siteTitle }) => (
-    <header
-        style={{
-            background: `rebeccapurple`,
-            marginBottom: `1.45rem`
-        }}
+const Header: FC<Props> = ({ title }) => (
+    <Navbar 
     >
-        <div
-            style={{
-                margin: `0 auto`,
-                maxWidth: 960,
-                padding: `1.45rem 1.0875rem`
-            }}
-        >
-            <h1 style={{ margin: 0 }}>
-                <Link
-                    to="/"
-                    style={{
-                        color: `white`,
-                        textDecoration: `none`
-                    }}
-                >
-                    {siteTitle}
-                </Link>
-            </h1>
-        </div>
-    </header>
+        <Navbar.Brand
+            id="header-title"
+        >{title}</Navbar.Brand>
+        <Navbar.Text>
+            Icons here
+        </Navbar.Text>
+    </Navbar>
 )
 
 export default Header

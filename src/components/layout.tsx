@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React, { FC } from "react"
-import Header from "./header"
+import Header from "./Header"
 import "./layout.scss"
 
 const Layout: FC<{}> = ({ children }) => {
@@ -16,7 +16,7 @@ const Layout: FC<{}> = ({ children }) => {
 
     return (
         <>
-            <Header siteTitle={data.site.siteMetadata.title} />
+            <Header title={data.site.siteMetadata.title} />
             <div
                 style={{
                     margin: `0 auto`,

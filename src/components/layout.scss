@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap');
+
 $white: #EEF1EF;
 $black: #040507;
+
 $enable-rounded: false;
 $body-bg: $black;
 $body-color: $white;
-$font-family-sans-serif: Montserrat;
-$headings-font-family: Ubuntu;
+$font-family-sans-serif: 'Montserrat', sans-serif;;
+$headings-font-family: 'Ubuntu', sans-serif;
 $line-height-base: 2;
+
+$grad-color-1: #ffc914;
+$grad-color-2: #e4572e;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
