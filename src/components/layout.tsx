@@ -9,6 +9,8 @@ const Layout: FC<{}> = ({ children }) => {
             site {
                 siteMetadata {
                     title
+                    twitterUrl
+                    websiteMail
                 }
             }
         }
@@ -16,7 +18,11 @@ const Layout: FC<{}> = ({ children }) => {
 
     return (
         <>
-            <Header title={data.site.siteMetadata.title} />
+            <Header
+                title={data.site.siteMetadata.title}
+                mailHref={"mailto:" + data.site.siteMetadata.websiteMail}
+                twitterHref={data.site.siteMetadata.twitterUrl}
+            />
             <div
                 style={{
                     margin: `0 auto`,
