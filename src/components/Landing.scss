@@ -1,0 +1,28 @@
+@import "../scss/mixins.scss";
+
+#landing-component {
+    background: url("../images/linesBlack.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+
+    #landing-text {
+        // background-color: rgba(139, 0, 0, 0.5);
+        padding-top: 18vh;
+        padding-bottom: 12vh;
+        h1 {
+            font-size: 3.45rem;
+        }
+    }
+
+    #landing-highlighted {
+        @include font-gradient;
+    }
+
+    #separator {
+        width: 3rem;
+    }
+
+    p.lead {
+        font-size: 2rem;
+    }
+}

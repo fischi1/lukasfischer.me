@@ -1,17 +1,18 @@
-@import "./layout.scss";
+@import "../scss/main.scss";
+@import "../scss/mixins.scss";
 
-.navbar {
-    border-bottom: 1px solid $gray-800;
-}
+#header-component {
+    background-color: $black;
+    position: absolute;
+    top: 0;
+    width: 100%;    
 
-#header-title {
-    color: $white;
-    font-family: $headings-font-family;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.5em;
-    background: linear-gradient(135deg, $grad-color-1 0%, $grad-color-2 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    #header-title {
+        color: $white;
+        font-family: $headings-font-family;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.5em;
+        @include font-gradient;
+    }
 }

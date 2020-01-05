@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React, { FC } from "react"
 import Header from "./Header"
-import "./layout.scss"
+import "../scss/main.scss"
 
 const Layout: FC<{}> = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -23,21 +23,7 @@ const Layout: FC<{}> = ({ children }) => {
                 mailHref={"mailto:" + data.site.siteMetadata.websiteMail}
                 twitterHref={data.site.siteMetadata.twitterUrl}
             />
-            <div
-                style={{
-                    margin: `0 auto`,
-                    maxWidth: 960,
-                    padding: `0px 1.0875rem 1.45rem`,
-                    paddingTop: 0
-                }}
-            >
-                <main>{children}</main>
-                <footer>
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
-            </div>
+            <main>{children}</main>
         </>
     )
 }

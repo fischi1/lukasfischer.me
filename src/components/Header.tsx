@@ -1,8 +1,6 @@
 import React, { FC } from "react"
 import { Navbar } from "react-bootstrap"
 import "./Header.scss"
-import MailIcon from "./icons/MailIcon"
-import TwitterIcon from "./icons/TwitterIcon"
 import IconLink from "./icons/IconLink"
 
 type Props = {
@@ -12,7 +10,7 @@ type Props = {
 }
 
 const Header: FC<Props> = props => (
-    <Navbar>
+    <Navbar id="header-component">
 
         <Navbar.Brand
             id="header-title"

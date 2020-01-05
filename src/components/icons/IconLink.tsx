@@ -1,7 +1,7 @@
-import React, { FC, useState } from "react"
+import React, { FC } from "react"
+import "./IconLink.scss"
 import MailIcon from "./MailIcon"
 import TwitterIcon from "./TwitterIcon"
-import "./IconLink.scss"
 
 type Props = {
     type: "twitter" | "mail"

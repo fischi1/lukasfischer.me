@@ -1,0 +1,8 @@
+@import "./main.scss";
+
+@mixin font-gradient {    
+    background: linear-gradient(135deg, $grad-color-1 0%, $grad-color-2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
