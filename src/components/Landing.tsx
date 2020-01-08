@@ -11,12 +11,13 @@ const Landing: FC<Props> = props => {
         >
             <div id="landing-text">
                 <h1>
-                    I like{" "}
-                    <span id="landing-highlighted">developing experiences</span>
+                    <span className="text-nowrap">I like</span>
+                    {" "}
+                    <span id="landing-highlighted" className="text-nowrap">developing experiences</span>
                 </h1>
             </div>
-            <div className="d-flex">
-                <div>
+            <div id="landing-subtext" className="d-flex flex-column flex-sm-row">
+                <div className="lead-container">
                     <p className="lead">
                         Front end
                         <br />
@@ -28,8 +29,8 @@ const Landing: FC<Props> = props => {
                 <div id="separator">
                     &nbsp;
                 </div>
-                <div>
-                    <p className="lead">
+                <div className="lead-container">
+                    <p className="lead text-right text-sm-left">
                         App development
                         <br />
                         Video games
