@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import "./Landing.scss"
+import HighlightLandingText from "./HighlightLandingText"
 
 type Props = {}
 
@@ -13,7 +14,9 @@ const Landing: FC<Props> = props => {
                 <h1>
                     <span className="text-nowrap">I like</span>
                     {" "}
-                    <span id="landing-highlighted" className="text-nowrap">developing experiences</span>
+                    <span id="landing-highlighted" className="text-nowrap">
+                        <HighlightLandingText text="developing experiences" />
+                    </span>
                 </h1>
             </div>
             <div id="landing-subtext" className="d-flex flex-column flex-sm-row">
