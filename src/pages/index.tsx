@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container } from "react-bootstrap"
 import Portrait from "../components/Portrait"
+import "../scss/main.scss"
 
 type Props = {
     data: any

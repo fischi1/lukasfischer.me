@@ -1,11 +1,11 @@
 @import "../scss/main.scss";
 
 .portrait-component {
-    width: 370px;
+    width: 250px;
     @include float-left;
 
     @include media-breakpoint-down(lg) {
-        width: 300px;
+        width: 200px;
     }
 
     @include media-breakpoint-down(sm) {
