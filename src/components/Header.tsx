@@ -20,7 +20,7 @@ const Header: FC<Props> = props => (
             &nbsp;
         </Navbar.Text>
 
-        <Navbar.Text>
+        <Navbar.Text className="text-nowrap">
             <span style={{display: "inline-block"}}>
                 <IconLink type="mail" href={props.mailHref}/>
             </span>

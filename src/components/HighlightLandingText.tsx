@@ -9,7 +9,7 @@ const HighlightLandingText: FC<Props> = ({text}) => {
     const ret : ReactNode[] = [];
 
     for (var i = 0; i < text.length; i++) {
-        ret.push(<span>{text.charAt(i)}</span>)
+        ret.push(<span key={i}>{text.charAt(i)}</span>)
     }
 
     return (
