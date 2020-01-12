@@ -4,6 +4,7 @@
     "@types/react-bootstrap": "^0.32.20",
     "@types/react-helmet": "^5.0.15",
     "bootstrap": "^4.4.1",
+    "clsx": "^1.0.4",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-manifest": "^2.2.31",

@@ -3,6 +3,10 @@
 
 $white: #EEF1EF;
 $black: #040507;
+$card-bg: #002642;
+
+$grad-color-1: #ffc914;
+$grad-color-2: #e4572e;
 
 $enable-rounded: false;
 $body-bg: $black;
@@ -10,9 +14,11 @@ $body-color: $white;
 $font-family-sans-serif: 'Montserrat', sans-serif;;
 $headings-font-family: 'Ubuntu', sans-serif;
 $line-height-base: 2;
-
-$grad-color-1: #ffc914;
-$grad-color-2: #e4572e;
+$card-border-color: none;
+$card-inner-border-radius: 0;
+$card-border-radius: 0;
+$card-cap-bg: $card-bg;
+$link-color: $grad-color-1;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 

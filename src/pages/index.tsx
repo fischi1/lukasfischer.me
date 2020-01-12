@@ -4,9 +4,11 @@ import Image from "../components/Image"
 import Landing from "../components/Landing"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import Portrait from "../components/Portrait"
 import "../scss/main.scss"
+import SectionHeading from "../components/SectionHeading"
+import ProjectCard from "../components/ProjectCard"
 
 type Props = {
     data: any
@@ -18,10 +20,7 @@ const IndexPage: FC<Props> = ({ data }) => {
             <Landing />
             <SEO title="Home" />
             <Container>
-                {/* transform into component */}
-                <div className=" text-center">
-                    <h1 className="font-gradient d-inline-block">Hi people</h1>
-                </div>
+                <SectionHeading>About me</SectionHeading>
 
                 <Portrait />
 
@@ -41,29 +40,20 @@ const IndexPage: FC<Props> = ({ data }) => {
                 </p>
 
                 <div className="clearfix">&nbsp;</div>
-                <hr />
 
-                <p>Welcome to your new Gatsby site.</p>
-                <p>Now go build something great.</p>
-                <p>
-                    <i>{data.site.siteMetadata.description}</i>
-                </p>
-                {[...Array(10).keys()].map(i => (
-                    <p key={i}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Maecenas rhoncus auctor tempor. Aliquam et dolor
-                        ultrices purus posuere convallis. Mauris accumsan dolor
-                        id felis malesuada pulvinar. Cras congue, ligula eget
-                        tristique semper, augue lectus maximus turpis, at
-                        interdum nibh neque nec tortor. Phasellus non vestibulum
-                        nisi. Morbi venenatis iaculis mauris, quis hendrerit
-                        odio iaculis vitae. Quisque at porta tortor. Proin
-                        venenatis elit tellus, sed iaculis leo bibendum a.
-                    </p>
-                ))}
-                <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-                    <Image imageName="gatsbyAstronaut" />
-                </div>
+                <SectionHeading>Projects</SectionHeading>
+
+                <Row>
+                    <ProjectCard></ProjectCard>
+                    <ProjectCard></ProjectCard>
+                    <ProjectCard></ProjectCard>
+                    <ProjectCard></ProjectCard>
+                    <ProjectCard></ProjectCard>
+                </Row>
+
+                <br />
+                <br />
+                <br />
                 <Link to="/page-2/">Go to page 2</Link>
             </Container>
         </Layout>
