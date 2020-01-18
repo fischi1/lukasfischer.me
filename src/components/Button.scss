@@ -1,0 +1,18 @@
+@import "../scss/main.scss";
+@import "../scss/mixins.scss";
+
+$btn-deg: 180deg;
+
+.btn {
+    @include gradient($btn-deg);
+    text-transform: uppercase;
+    color: $black !important;
+
+    &:hover, &:active {    
+        @include gradient-darker($btn-deg);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($grad-color-2, 0.5);
+    }
+}

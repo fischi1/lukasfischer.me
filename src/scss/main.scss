@@ -19,11 +19,15 @@ $card-inner-border-radius: 0;
 $card-border-radius: 0;
 $card-cap-bg: $card-bg;
 $link-color: $grad-color-1;
+$input-btn-font-family: $headings-font-family;
+$btn-font-weight: 700;
+$input-btn-border-width: 0;
+$input-btn-padding-y: 0;
+$input-btn-padding-x: .5rem;
+$primary: $grad-color-1;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
 body {
     min-width: 320px;
 }
-
-

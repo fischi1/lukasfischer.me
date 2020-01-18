@@ -9,6 +9,7 @@ import Portrait from "../components/Portrait"
 import "../scss/main.scss"
 import SectionHeading from "../components/SectionHeading"
 import ProjectCard from "../components/ProjectCard"
+import Button from "../components/Button"
 
 type Props = {
     data: any
@@ -43,7 +44,15 @@ const IndexPage: FC<Props> = ({ data }) => {
 
                 <SectionHeading>Projects</SectionHeading>
 
-                <Row>
+                <Button className="mr-3">
+                    More ...
+                </Button>
+
+                <Button>
+                    Demo
+                </Button>
+
+                <Row className="mt-3">
                     <ProjectCard></ProjectCard>
                     <ProjectCard></ProjectCard>
                     <ProjectCard></ProjectCard>

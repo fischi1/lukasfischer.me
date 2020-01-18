@@ -1,7 +1,17 @@
 @import "./main.scss";
 
+@mixin gradient($deg: 135deg) {
+    background-color: $grad-color-1;
+    background: linear-gradient($deg, $grad-color-1 0%, $grad-color-2 100%);
+}
+
+@mixin gradient-darker($deg: 135deg) {
+    background-color: darken($grad-color-1, 25%);
+    background: linear-gradient($deg, darken($grad-color-1, 25%) 0%, darken($grad-color-2, 25%) 100%);
+}
+
 @mixin font-gradient {    
-    background: linear-gradient(135deg, $grad-color-1 0%, $grad-color-2 100%);
+    @include gradient;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
