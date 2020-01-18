@@ -1,11 +1,11 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React, { FC } from "react"
-import { Container, Row } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import ButtonLink from "../components/ButtonLink"
 import Landing from "../components/Landing"
 import Layout from "../components/Layout"
 import Portrait from "../components/Portrait"
-import ProjectCard from "../components/ProjectCard"
+import ProjectDetail from "../components/ProjectDetail"
 import SectionHeading from "../components/SectionHeading"
 import SEO from "../components/Seo"
 import "../scss/main.scss"
@@ -42,22 +42,16 @@ const IndexPage: FC<Props> = ({ data }) => {
                 <div className="clearfix">&nbsp;</div>
 
                 <SectionHeading>Projects</SectionHeading>
-
-                <ButtonLink className="mr-3"  to="/page-2/">
-                    More ...
-                </ButtonLink>
-
-                <ButtonLink  to="/demo/">
-                    Demo
-                </ButtonLink>
-
-                <Row className="mt-3">
-                    <ProjectCard></ProjectCard>
-                    <ProjectCard></ProjectCard>
-                    <ProjectCard></ProjectCard>
-                    <ProjectCard></ProjectCard>
-                    <ProjectCard></ProjectCard>
-                </Row>
+                
+                <div className="d-flex flex-row justify-content-center">
+                    <div style={{maxWidth: "890px", width: "100%"}}>
+                        <ProjectDetail />
+                        <ProjectDetail flipped />
+                        <ProjectDetail />
+                        <ProjectDetail flipped />
+                        <ProjectDetail />
+                    </div>
+                </div>
 
                 <br />
                 <br />

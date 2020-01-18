@@ -1,0 +1,18 @@
+
+
+.project-detail {
+    //background-color: rgba(darkred, .25);
+
+    .project-image {
+        flex: 1 1 45%;
+    }
+
+    .project-spacer {
+        flex: 1 1 10%;
+    }
+
+    .project-content {
+        flex: 1 1 45%;
+        //background-color: rgba(violet, 0.25);
+    }
+}
