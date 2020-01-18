@@ -3,6 +3,7 @@
 .project-divider {
     @include gradient(90deg);
     height: 1px;
-    width: 312px;
+    max-width: 312px;
+    width: 100%;
     display: inline-block;
 }

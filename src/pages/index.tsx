@@ -5,6 +5,7 @@ import ButtonLink from "../components/ButtonLink"
 import Landing from "../components/Landing"
 import Layout from "../components/Layout"
 import Portrait from "../components/Portrait"
+import ProjectContainer from "../components/ProjectContainer"
 import ProjectDetail from "../components/ProjectDetail"
 import SectionHeading from "../components/SectionHeading"
 import SEO from "../components/Seo"
@@ -42,24 +43,20 @@ const IndexPage: FC<Props> = ({ data }) => {
                 <div className="clearfix">&nbsp;</div>
 
                 <SectionHeading>Projects</SectionHeading>
-                
-                <div className="d-flex flex-row justify-content-center">
-                    <div style={{maxWidth: "890px", width: "100%"}}>
-                        <ProjectDetail />
-                        <ProjectDetail flipped />
-                        <ProjectDetail />
-                        <ProjectDetail flipped />
-                        <ProjectDetail last />
-                    </div>
-                </div>
+
+                <ProjectContainer>
+                    <ProjectDetail />
+                    <ProjectDetail flipped />
+                    <ProjectDetail />
+                    <ProjectDetail flipped />
+                    <ProjectDetail last />
+                </ProjectContainer>
 
                 <br />
                 <br />
                 <br />
 
-                <ButtonLink to="/page-2/">
-                    Go to page 2
-                </ButtonLink>
+                <ButtonLink to="/page-2/">Go to page 2</ButtonLink>
             </Container>
         </Layout>
     )

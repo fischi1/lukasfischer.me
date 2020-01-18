@@ -14,9 +14,12 @@ const ProjectDetail: FC<Props> = props => {
     return (
         <>
             <div
-                className={clsx("project-detail my-3 d-flex", {
-                    "flex-row-reverse": props.flipped
-                })}
+                className={clsx(
+                    "project-detail my-3 d-flex flex-column flex-md-row",
+                    {
+                        "flex-md-row-reverse": props.flipped
+                    }
+                )}
             >
                 <div className="project-image">
                     <AspectRatioDiv
@@ -33,13 +36,13 @@ const ProjectDetail: FC<Props> = props => {
                 <div className="project-spacer">&nbsp;</div>
                 <div
                     className={clsx(
-                        "project-content d-flex align-items-center",
-                        { "text-right flex-row-reverse": props.flipped }
+                        "project-content d-flex align-items-center text-center text-md-left",
+                        { "text-md-right flex-row-reverse": props.flipped }
                     )}
                 >
-                    <div>
+                    <div className="w-100">
                         <h2 className="h3">Inifinite Boards</h2>
-                        <p className="mb-5">
+                        <p className="mb-2 mb-md-5">
                             Lorem ipsum dolor sit amet Lorem ipsum dolor sit
                             amet
                         </p>
