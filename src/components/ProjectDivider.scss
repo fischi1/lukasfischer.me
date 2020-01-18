@@ -1,0 +1,8 @@
+@import "../scss/mixins.scss";
+
+.project-divider {
+    @include gradient(90deg);
+    height: 1px;
+    width: 312px;
+    display: inline-block;
+}

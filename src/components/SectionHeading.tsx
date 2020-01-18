@@ -7,7 +7,7 @@ type Props = {
 
 const SectionHeading: FC<Props> = ({children, className}) => {
     return (
-        <div className={clsx("text-center mt-5 mb-1", className)}>
+        <div className={clsx("text-center mt-5 mb-4 mb-1", className)}>
             <h1 className="font-gradient d-inline-block">
                 {children}
             </h1>

@@ -49,7 +49,7 @@ const IndexPage: FC<Props> = ({ data }) => {
                         <ProjectDetail flipped />
                         <ProjectDetail />
                         <ProjectDetail flipped />
-                        <ProjectDetail />
+                        <ProjectDetail last />
                     </div>
                 </div>
 
