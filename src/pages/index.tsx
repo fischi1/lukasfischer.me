@@ -1,15 +1,14 @@
 import { graphql, Link } from "gatsby"
 import React, { FC } from "react"
-import Image from "../components/Image"
+import { Container, Row } from "react-bootstrap"
+import ButtonLink from "../components/ButtonLink"
 import Landing from "../components/Landing"
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
-import { Container, Row, Col } from "react-bootstrap"
 import Portrait from "../components/Portrait"
-import "../scss/main.scss"
-import SectionHeading from "../components/SectionHeading"
 import ProjectCard from "../components/ProjectCard"
-import Button from "../components/Button"
+import SectionHeading from "../components/SectionHeading"
+import SEO from "../components/Seo"
+import "../scss/main.scss"
 
 type Props = {
     data: any
@@ -44,13 +43,13 @@ const IndexPage: FC<Props> = ({ data }) => {
 
                 <SectionHeading>Projects</SectionHeading>
 
-                <Button className="mr-3">
+                <ButtonLink className="mr-3"  to="/page-2/">
                     More ...
-                </Button>
+                </ButtonLink>
 
-                <Button>
+                <ButtonLink  to="/demo/">
                     Demo
-                </Button>
+                </ButtonLink>
 
                 <Row className="mt-3">
                     <ProjectCard></ProjectCard>
@@ -63,7 +62,10 @@ const IndexPage: FC<Props> = ({ data }) => {
                 <br />
                 <br />
                 <br />
-                <Link to="/page-2/">Go to page 2</Link>
+
+                <ButtonLink to="/page-2/">
+                    Go to page 2
+                </ButtonLink>
             </Container>
         </Layout>
     )
