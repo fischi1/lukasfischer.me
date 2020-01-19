@@ -5,6 +5,7 @@ import BackButtonRow from "../components/BackButtonRow"
 import Landing from "../components/Landing"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
+import VideoIframe from "../components/VideoIframe"
 
 const SecondPage: FC = props => (
     <Layout>
@@ -16,22 +17,10 @@ const SecondPage: FC = props => (
                         Infinite Boards
                     </h1>
                 </div>
-                <div className="pb-5">
-                    <AspectRatioDiv>
-                        <iframe
-                            src="https://www.youtube-nocookie.com/embed/ohNLuQ7aotY"
-                            frameBorder={0}
-                            allowFullScreen
-                            style={{
-                                position: "absolute",
-                                top: "0",
-                                left: "0",
-                                width: "100%",
-                                height: "100%"
-                            }}
-                        ></iframe>
-                    </AspectRatioDiv>
-                </div>
+                <VideoIframe
+                    className="pb-5"
+                    src="https://www.youtube-nocookie.com/embed/ohNLuQ7aotY"
+                />
             </Container>
         </Landing>
         <Container>
