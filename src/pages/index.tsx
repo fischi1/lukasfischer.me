@@ -1,8 +1,8 @@
-import { graphql } from "gatsby"
 import React, { FC } from "react"
 import { Container } from "react-bootstrap"
 import ButtonLink from "../components/ButtonLink"
 import Landing from "../components/Landing"
+import LandingContentIndex from "../components/LandingContentIndex"
 import Layout from "../components/Layout"
 import Portrait from "../components/Portrait"
 import ProjectContainer from "../components/ProjectContainer"
@@ -11,14 +11,14 @@ import SectionHeading from "../components/SectionHeading"
 import SEO from "../components/Seo"
 import "../scss/main.scss"
 
-type Props = {
-    data: any
-}
+type Props = {}
 
-const IndexPage: FC<Props> = ({ data }) => {
+const IndexPage: FC<Props> = props => {
     return (
         <Layout>
-            <Landing />
+            <Landing fullHeight>
+                <LandingContentIndex />
+            </Landing>
             <SEO title="Home" />
             <Container>
                 <SectionHeading>About me</SectionHeading>
@@ -63,13 +63,3 @@ const IndexPage: FC<Props> = ({ data }) => {
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-    query {
-        site {
-            siteMetadata {
-                description
-            }
-        }
-    }
-`
