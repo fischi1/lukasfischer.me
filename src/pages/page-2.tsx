@@ -1,6 +1,5 @@
 import React, { FC } from "react"
 import { Container } from "react-bootstrap"
-import AspectRatioDiv from "../components/AspectRatioDiv"
 import BackButtonRow from "../components/BackButtonRow"
 import Landing from "../components/Landing"
 import Layout from "../components/Layout"

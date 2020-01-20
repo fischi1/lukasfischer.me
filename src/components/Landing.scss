@@ -1,6 +1,16 @@
+.landing-component,
+.landing-component::after,
+.landing-component::before {
+    background-attachment: fixed;
+}
+
 .landing-component {
-    background: url("../images/linesBlack.png") no-repeat center center fixed;
-    background-size: cover;
+    // background: url("../images/linesBlack.png") no-repeat center center fixed;
+    // background-image: url("../images/linesBlack.png");
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-attachment: fixed;
+    // background-size: cover;
 
     .header-placeholder {
         width: 100%;
