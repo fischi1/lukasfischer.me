@@ -1,7 +1,5 @@
 import React, { FC, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import "react-image-lightbox/style.css"
-import Button from "./Button"
 import GalleryPreviewThumbnail from "./GalleryPreviewThumbnail"
 import LightboxWrapper from "./LightboxWrapper"
 import "./ProjectGallery.scss"
@@ -14,24 +12,28 @@ const ProjectGallery: FC<Props> = props => {
     const [open, setOpen] = useState(false)
     const [imageIndex, setImageIndex] = useState(0)
 
+    const openImage = (index: number) => {
+        setImageIndex(index)
+        setOpen(true)
+    }
+
     return (
         <Container className="project-gallery my-5" fluid>
-            <LightboxWrapper 
+            <LightboxWrapper
                 open={open}
                 setOpen={setOpen}
                 imageIndex={imageIndex}
                 setImageIndex={setImageIndex}
                 images={props.images}
             />
-            <div>
-                <Button onClick={() => setOpen(true)}>Open</Button>
-            </div>
+
             <Row noGutters>
-                {props.images.map(imgUrl => (
+                {props.images.map((imgUrl, i) => (
                     <Col xs={6} md={4} xl={3} key={imgUrl}>
-                        <div className="m-1">
-                            <GalleryPreviewThumbnail src={imgUrl} />
-                        </div>
+                        <GalleryPreviewThumbnail
+                            src={imgUrl}
+                            onClick={() => openImage(i)}
+                        />
                     </Col>
                 ))}
             </Row>

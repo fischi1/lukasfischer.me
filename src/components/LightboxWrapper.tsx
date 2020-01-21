@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import Lightbox from "react-image-lightbox"
+import "react-image-lightbox/style.css"
 import Button from "./Button"
 
 type Props = {
@@ -33,6 +34,7 @@ const LightboxWrapper: FC<Props> = ({
             }
             enableZoom={false}
             animationOnKeyInput
+            animationDuration={150}
             toolbarButtons={[
                 <Button onClick={() => setOpen(false)}>Close</Button>
             ]}

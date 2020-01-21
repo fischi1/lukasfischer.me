@@ -4,12 +4,25 @@ import AspectRatioDiv from "./AspectRatioDiv"
 
 type Props = {
     src: string
+    onClick: () => void
 }
 
 const GalleryPreviewThumbnail: FC<Props> = props => {
     return (
-        <AspectRatioDiv ratio={2 / 3} style={{ background: `url("${props.src}") no-repeat center center`, backgroundSize: "cover" }}>
-        </AspectRatioDiv>
+        <div
+            className="gallery-preview-thumbnail m-1"
+            onClick={props.onClick}
+            role="button"
+            aria-label="View image"
+        >
+            <AspectRatioDiv
+                ratio={2 / 3}
+                style={{
+                    background: `url("${props.src}") no-repeat center center`,
+                    backgroundSize: "cover"
+                }}
+            ></AspectRatioDiv>
+        </div>
     )
 }
 
