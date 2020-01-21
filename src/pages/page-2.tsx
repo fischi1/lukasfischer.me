@@ -5,6 +5,7 @@ import Landing from "../components/Landing"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import VideoIframe from "../components/VideoIframe"
+import ProjectGallery from "../components/ProjectGallery"
 
 const SecondPage: FC = props => (
     <Layout>
@@ -64,6 +65,18 @@ const SecondPage: FC = props => (
                 to the topics of my matriculation project and bachelor thesis.
             </p>
         </Container>
+        <ProjectGallery
+            images={[
+                "https://lukasfischer.me/assets/images/infiniteboards.jpg",
+                "https://lukasfischer.me/assets/images/infiniteboards-4.jpg",
+                "https://lukasfischer.me/assets/images/infiniteboards-1.jpg",
+                "https://lukasfischer.me/assets/images/infiniteboards-2.jpg",
+                "https://lukasfischer.me/assets/images/0.png",
+                "https://lukasfischer.me/assets/images/13.png",
+                "https://lukasfischer.me/assets/images/colorshoot.png",
+                "https://lukasfischer.me/assets/images/14.png"
+            ]}
+        />
     </Layout>
 )
 

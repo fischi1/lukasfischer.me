@@ -23,8 +23,6 @@ const Landing: FC<Props> = props => {
 
     const image = data.linesBlack.childImageSharp.fluid
 
-    console.log(image)
-
     return (
         <BackgroundImage
             Tag="div"
