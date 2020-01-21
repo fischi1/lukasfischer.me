@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import TargetBlankLink from "../TargetBlankLink"
 import "./IconLink.scss"
 import MailIcon from "./MailIcon"
 import TwitterIcon from "./TwitterIcon"
@@ -10,10 +11,10 @@ type Props = {
 
 const IconLink: FC<Props> = ({ type, href }) => {
     return (
-        <a className="icon-link" href={href} target="_blank" rel="noopener noreferrer">
+        <TargetBlankLink className="icon-link">
             {type === "twitter" && <TwitterIcon />}
             {type === "mail" && <MailIcon />}
-        </a>
+        </TargetBlankLink>
     )
 }
 

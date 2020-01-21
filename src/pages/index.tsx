@@ -21,7 +21,7 @@ const IndexPage: FC<Props> = props => {
             </Landing>
             <SEO title="Home" />
             <Container>
-                <SectionHeading>About me</SectionHeading>
+                <SectionHeading displayAsH1>About me</SectionHeading>
 
                 <Portrait />
 
@@ -42,7 +42,7 @@ const IndexPage: FC<Props> = props => {
 
                 <div className="clearfix">&nbsp;</div>
 
-                <SectionHeading>Projects</SectionHeading>
+                <SectionHeading displayAsH1>Projects</SectionHeading>
 
                 <ProjectContainer>
                     <ProjectDetail />
