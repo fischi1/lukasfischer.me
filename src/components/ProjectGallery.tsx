@@ -18,7 +18,7 @@ const ProjectGallery: FC<Props> = props => {
     }
 
     return (
-        <Container className="project-gallery my-5" fluid>
+        <Container className="project-gallery mt-3 mb-1" fluid>
             <LightboxWrapper
                 open={open}
                 setOpen={setOpen}

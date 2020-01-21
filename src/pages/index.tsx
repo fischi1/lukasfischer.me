@@ -51,12 +51,6 @@ const IndexPage: FC<Props> = props => {
                     <ProjectDetail flipped />
                     <ProjectDetail last />
                 </ProjectContainer>
-
-                <br />
-                <br />
-                <br />
-
-                <ButtonLink to="/page-2/">Go to page 2</ButtonLink>
             </Container>
         </Layout>
     )
