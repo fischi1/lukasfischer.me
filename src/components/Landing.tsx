@@ -11,7 +11,7 @@ type Props = {
 const Landing: FC<Props> = props => {
     const data = useStaticQuery(graphql`
         query {
-            linesBlack: file(relativePath: { eq: "linesBlack.png" }) {
+            linesBlack: file(relativePath: { eq: "images/linesBlack.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 1920, base64Width: 100, quality: 90) {
                         ...GatsbyImageSharpFluid_withWebp

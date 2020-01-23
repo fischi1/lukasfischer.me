@@ -47,7 +47,7 @@ const ProjectDetail: FC<Props> = props => {
                             amet
                         </p>
                         <div>
-                            <ButtonLink className="mr-3" to="/demo/">
+                            <ButtonLink className="mr-3" to="/infinite-boards/">
                                 Demo
                             </ButtonLink>
                             <ButtonLink to="/page-2/">More ...</ButtonLink>

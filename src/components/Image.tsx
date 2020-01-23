@@ -19,10 +19,10 @@ export const squareImage = graphql`
 const Image: FC<Props> = ({ imageName }) => {
     const data = useStaticQuery(graphql`
         query {
-            gatsbyAstronaut: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+            gatsbyAstronaut: file(relativePath: { eq: "images/gatsby-astronaut.png" }) {
                 ...squareImage
             }
-            portrait: file(relativePath: { eq: "fischi.png" }) {
+            portrait: file(relativePath: { eq: "images/fischi.png" }) {
                 ...squareImage
             }
         }
