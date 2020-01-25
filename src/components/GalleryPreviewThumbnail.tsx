@@ -1,29 +1,30 @@
+import Img, { FluidObject } from "gatsby-image"
 import React, { FC } from "react"
 import "./GalleryPreviewThumbnail.scss"
 import AspectRatioDiv from "./AspectRatioDiv"
+import BackgroundImage from "gatsby-background-image"
 
 type Props = {
-    src: string
+    fluid: FluidObject
     onClick: () => void
 }
 
-const GalleryPreviewThumbnail: FC<Props> = props => {
-    return (
-        <div
-            className="gallery-preview-thumbnail m-1"
-            onClick={props.onClick}
-            role="button"
-            aria-label="View image"
-        >
-            <AspectRatioDiv
-                ratio={2 / 3}
-                style={{
-                    background: `url("${props.src}") no-repeat center center`,
-                    backgroundSize: "cover"
-                }}
-            ></AspectRatioDiv>
-        </div>
-    )
-}
+const GalleryPreviewThumbnail: FC<Props> = props => (
+    <div
+        className="gallery-preview-thumbnail m-1"
+        onClick={props.onClick}
+        role="button"
+        aria-label="View image"
+    >
+        <AspectRatioDiv ratio={2 / 3}>
+            <BackgroundImage
+                Tag="div"
+                fluid={props.fluid}
+                backgroundColor={`#040507`}
+                style={{ width: "100%", height: "100%" }}
+            />
+        </AspectRatioDiv>
+    </div>
+)
 
 export default GalleryPreviewThumbnail

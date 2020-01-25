@@ -1,6 +1,18 @@
 ---
 title: "Infinite Boards"
+short: "Augmented reality board game"
 landing: { video: https://www.youtube-nocookie.com/embed/ohNLuQ7aotY }
+images:
+    [
+        "../../images/project/infiniteBoards/InfiniteBoards.jpg",
+        "../../images/project/infiniteBoards/colorShoot.png",
+        "../../images/project/infiniteBoards/InfiniteBoards1.jpg",
+        "../../images/project/infiniteBoards/InfiniteBoards2.jpg",
+        "../../images/project/infiniteBoards/InfiniteBoards3.jpg",
+        "../../images/project/infiniteBoards/inifiniteBoards4.png",
+        "../../images/project/infiniteBoards/menu.png",
+        "../../images/project/infiniteBoards/minigame.png",
+    ]
 ---
 
 **Infinite Boards** is an Augmented Reality board game for Android devices. Through AR this application combines a board game with minigames. It can be enjoyed with up to four players locally or against virtual opponents.

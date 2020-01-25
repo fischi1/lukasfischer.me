@@ -50,7 +50,9 @@ const ProjectDetail: FC<Props> = props => {
                             <ButtonLink className="mr-3" to="/infinite-boards/">
                                 Demo
                             </ButtonLink>
-                            <ButtonLink to="/page-2/">More ...</ButtonLink>
+                            <ButtonLink to="/my-second-proj/">
+                                More ...
+                            </ButtonLink>
                         </div>
                     </div>
                 </div>

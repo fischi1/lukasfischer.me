@@ -1,11 +1,12 @@
-import React, { FC, useState } from "react"
+import { FluidObject } from "gatsby-image"
+import React, { FC, useMemo, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import GalleryPreviewThumbnail from "./GalleryPreviewThumbnail"
 import LightboxWrapper from "./LightboxWrapper"
 import "./ProjectGallery.scss"
 
 type Props = {
-    images: string[]
+    images: FluidObject[]
 }
 
 const ProjectGallery: FC<Props> = props => {
@@ -17,6 +18,24 @@ const ProjectGallery: FC<Props> = props => {
         setOpen(true)
     }
 
+    const srcArr = props.images.map(image => image.src)
+
+    const memoizedThumbnails = useMemo(
+        () => (
+            <Row noGutters>
+                {props.images.map((img, i) => (
+                    <Col xs={6} md={4} xl={3} key={img.src}>
+                        <GalleryPreviewThumbnail
+                            fluid={img}
+                            onClick={() => openImage(i)}
+                        />
+                    </Col>
+                ))}
+            </Row>
+        ),
+        [props.images]
+    )
+
     return (
         <Container className="project-gallery mt-3 mb-1" fluid>
             <LightboxWrapper
@@ -24,19 +43,9 @@ const ProjectGallery: FC<Props> = props => {
                 setOpen={setOpen}
                 imageIndex={imageIndex}
                 setImageIndex={setImageIndex}
-                images={props.images}
+                images={srcArr}
             />
-
-            <Row noGutters>
-                {props.images.map((imgUrl, i) => (
-                    <Col xs={6} md={4} xl={3} key={imgUrl}>
-                        <GalleryPreviewThumbnail
-                            src={imgUrl}
-                            onClick={() => openImage(i)}
-                        />
-                    </Col>
-                ))}
-            </Row>
+            {memoizedThumbnails}
         </Container>
     )
 }

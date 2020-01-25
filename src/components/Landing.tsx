@@ -1,8 +1,8 @@
 import clsx from "clsx"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import React, { FC } from "react"
 import "./Landing.scss"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 
 type Props = {
     fullHeight?: boolean
@@ -26,7 +26,7 @@ const Landing: FC<Props> = props => {
     return (
         <BackgroundImage
             Tag="div"
-            fluid={image}            
+            fluid={image}
             backgroundColor={`#040507`}
             className={clsx("landing-component", {
                 "d-flex flex-column align-items-center justify-content-center landing-component-full-height":

@@ -20,6 +20,13 @@ const ProjectTemplate: FC<Props> = props => {
 
     const title = frontmatter?.title ?? "Title missing"
 
+    let imgArray = null
+
+    if (frontmatter?.images)
+        imgArray = frontmatter?.images?.map(
+            img => img?.childImageSharp?.fluid
+        ) as any
+
     return (
         <Layout>
             <SEO title={title} />
@@ -40,18 +47,7 @@ const ProjectTemplate: FC<Props> = props => {
                 {projectAstCompiler(htmlAst)}
                 <BackButtonRow className="mt-5" />
             </Container>
-            <ProjectGallery
-                images={[
-                    "https://lukasfischer.me/assets/images/infiniteboards.jpg",
-                    "https://lukasfischer.me/assets/images/infiniteboards-4.jpg",
-                    "https://lukasfischer.me/assets/images/infiniteboards-1.jpg",
-                    "https://lukasfischer.me/assets/images/infiniteboards-2.jpg",
-                    "https://lukasfischer.me/assets/images/0.png",
-                    "https://lukasfischer.me/assets/images/13.png",
-                    "https://lukasfischer.me/assets/images/colorshoot.png",
-                    "https://lukasfischer.me/assets/images/14.png"
-                ]}
-            />
+            {imgArray && <ProjectGallery images={imgArray} />}
         </Layout>
     )
 }
@@ -66,6 +62,13 @@ export const query = graphql`
                 title
                 landing {
                     video
+                }
+                images {
+                    childImageSharp {
+                        fluid(maxWidth: 2560, quality: 100, base64Width: 50) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
                 }
             }
         }
