@@ -8,14 +8,15 @@ import Layout from "../components/Layout"
 import ProjectGallery from "../components/ProjectGallery"
 import SEO from "../components/Seo"
 import VideoIframe from "../components/VideoIframe"
+import projectAstCompiler from "./projectAstCompiler"
 
 type Props = {
     data: ProjectTemplateQuery
 }
 
-const SecondPage: FC<Props> = props => {
+const ProjectTemplate: FC<Props> = props => {
     const frontmatter = props.data.markdownRemark?.frontmatter
-    const html = props.data.markdownRemark?.html
+    const htmlAst = props.data.markdownRemark?.htmlAst
 
     const title = frontmatter?.title ?? "Title missing"
 
@@ -36,11 +37,7 @@ const SecondPage: FC<Props> = props => {
                 </Container>
             </Landing>
             <Container className="pt-5">
-                <div
-                    dangerouslySetInnerHTML={{
-                        __html: html ?? "Content missing"
-                    }}
-                ></div>
+                {projectAstCompiler(htmlAst)}
                 <BackButtonRow className="mt-5" />
             </Container>
             <ProjectGallery
@@ -59,12 +56,12 @@ const SecondPage: FC<Props> = props => {
     )
 }
 
-export default SecondPage
+export default ProjectTemplate
 
 export const query = graphql`
     query ProjectTemplate($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
+            htmlAst
             frontmatter {
                 title
                 landing {

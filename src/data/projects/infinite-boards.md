@@ -9,10 +9,18 @@ This project was the thesis for my matriculation at HTL Wels in 2015. When we we
 
 The thesis was done together with Sophie Klein. My responsibilities were the technical implementation, testing and game design.
 
+<bs-row>
+
+<bs-col>
+
 ## Technologies
 
 -   [Unity game engine](https://unity.com/)
 -   [Vuforia Augmented Reality SDK](https://www.vuforia.com/) by Qualcomm
+
+</bs-col>
+
+<bs-col>
 
 ## Awards
 
@@ -23,3 +31,7 @@ The thesis was done together with Sophie Klein. My responsibilities were the tec
 -   [Prix Talentis by Kiwanis Club Wels](https://www.meinbezirk.at/wels-wels-land/c-lokales/kiwanis-preis-prix-talentis-fuer-htl-diplomarbeiten_a1393034)  
     Category: Information Technology  
     **Won!**
+
+</bs-col>
+
+</bs-row>
