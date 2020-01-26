@@ -6,8 +6,8 @@ import BackButtonRow from "../components/BackButtonRow"
 import Landing from "../components/Landing"
 import Layout from "../components/Layout"
 import ProjectGallery from "../components/ProjectGallery"
+import ProjectLanding from "../components/ProjectLanding"
 import SEO from "../components/Seo"
-import VideoIframe from "../components/VideoIframe"
 import projectAstCompiler from "./projectAstCompiler"
 
 type Props = {
@@ -31,17 +31,7 @@ const ProjectTemplate: FC<Props> = props => {
         <Layout>
             <SEO title={title} />
             <Landing>
-                <Container>
-                    <div className="text-center">
-                        <h1 className="font-gradient my-5 d-inline-block">
-                            {title}
-                        </h1>
-                    </div>
-                    <VideoIframe
-                        className="pb-5"
-                        src={frontmatter?.landing?.video ?? ""}
-                    />
-                </Container>
+                <ProjectLanding frontmatter={frontmatter} />
             </Landing>
             <Container className="pt-5">
                 {projectAstCompiler(htmlAst)}
@@ -62,6 +52,17 @@ export const query = graphql`
                 title
                 landing {
                     video
+                    image {
+                        childImageSharp {
+                            fluid(
+                                maxWidth: 2560
+                                quality: 90
+                                base64Width: 50
+                            ) {
+                                ...GatsbyImageSharpFluid_withWebp
+                            }
+                        }
+                    }
                 }
                 images {
                     childImageSharp {
