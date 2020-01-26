@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import { Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { FluidObject } from "gatsby-image"
 import React, { FC } from "react"
@@ -28,14 +29,18 @@ const ProjectDetail: FC<Props> = props => (
             )}
         >
             <div className="project-image">
-                <AspectRatioDiv ratio={2 / 3}>
-                    <BackgroundImage
-                        Tag="div"
-                        fluid={props.fluidImage}
-                        backgroundColor={`#040507`}
-                        style={{ width: "100%", height: "100%" }}
-                    />
-                </AspectRatioDiv>
+                <Link to={props.slug}>
+                    <AspectRatioDiv ratio={2 / 3}>
+                        <BackgroundImage
+                            role="image"
+                            alt={props.title}
+                            Tag="div"
+                            fluid={props.fluidImage}
+                            backgroundColor={`#040507`}
+                            style={{ width: "100%", height: "100%" }}
+                        />
+                    </AspectRatioDiv>
+                </Link>
             </div>
             <div className="project-spacer">&nbsp;</div>
             <div
