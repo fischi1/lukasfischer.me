@@ -1,6 +1,7 @@
 ---
 title: "Infinite Boards"
 short: "Augmented reality board game"
+order: 0
 landing: { video: https://www.youtube-nocookie.com/embed/ohNLuQ7aotY }
 images:
     [

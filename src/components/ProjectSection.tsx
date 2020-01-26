@@ -16,6 +16,7 @@ const ProjectSection: FC<Props> = props => {
                         title
                         short
                         demo
+                        order
                         images {
                             childImageSharp {
                                 fluid(
@@ -36,12 +37,20 @@ const ProjectSection: FC<Props> = props => {
         }
     `) as ProjectSectionQuery
 
-    const projects = data.allMarkdownRemark.nodes
+    const projects = data.allMarkdownRemark.nodes.sort((a, b) => {
+        const numA = a.frontmatter?.order ?? 99999
+        const numB = b.frontmatter?.order ?? 99999
+
+        if (numA < numB) return -1
+        if (numA > numB) return 1
+        return 0
+    })
 
     return (
         <ProjectContainer>
             {projects.map((proj, i) => (
                 <ProjectDetail
+                    key={proj.fields?.slug ?? "Slug missing"}
                     title={proj.frontmatter?.title ?? "Title missing"}
                     short={proj.frontmatter?.short ?? "Short missing"}
                     slug={proj.fields?.slug ?? "Slug missing"}

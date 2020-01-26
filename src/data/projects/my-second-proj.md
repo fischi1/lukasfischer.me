@@ -1,6 +1,7 @@
 ---
 title: "Second Project"
 short: "This is my second project"
+order: 99
 landing: { video: https://www.youtube-nocookie.com/embed/byDZTO1aNkQ }
 images:
     [

@@ -1,6 +1,7 @@
 ---
 title: "Third Project"
 short: "Third project"
+order: 100
 demo: "https://fishynator.itch.io/numpad-hero"
 landing: { video: https://www.youtube-nocookie.com/embed/gtMcelbBYyU }
 images:
