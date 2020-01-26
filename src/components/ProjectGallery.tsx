@@ -18,7 +18,7 @@ const ProjectGallery: FC<Props> = props => {
         setOpen(true)
     }
 
-    const srcArr = props.images.map(image => image.src)
+    const srcArr = props.images.map(image => image.srcWebp + "")
 
     const memoizedThumbnails = useMemo(
         () => (

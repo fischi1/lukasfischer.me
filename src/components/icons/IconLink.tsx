@@ -11,7 +11,7 @@ type Props = {
 
 const IconLink: FC<Props> = ({ type, href }) => {
     return (
-        <TargetBlankLink className="icon-link">
+        <TargetBlankLink href={href} className="icon-link">
             {type === "twitter" && <TwitterIcon />}
             {type === "mail" && <MailIcon />}
         </TargetBlankLink>
