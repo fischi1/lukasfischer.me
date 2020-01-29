@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import HighlightLandingText from "./HighlightLandingText"
+import LandingContentAnimatedText from "./LandingContentAnimatedText"
 import "./LandingContentIndex.scss"
 
 type Props = {}
@@ -9,9 +9,7 @@ const LandingContentIndex: FC<Props> = props => (
         <div id="landing-text">
             <h1>
                 <span className="text-nowrap">I like</span>{" "}
-                <span id="landing-highlighted" className="text-nowrap">
-                    <HighlightLandingText text="developing experiences" />
-                </span>
+                <LandingContentAnimatedText />
             </h1>
         </div>
         <div id="landing-subtext" className="d-flex flex-column flex-sm-row">
