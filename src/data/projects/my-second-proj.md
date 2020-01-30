@@ -2,11 +2,12 @@
 title: "Second Project"
 short: "This is my second project"
 order: 99
+thumbnail: "../../images/gatsby-astronaut.png"
 landing: { video: https://www.youtube-nocookie.com/embed/byDZTO1aNkQ }
 images:
     [
         "../../images/gatsby-astronaut.png",
-        "../../images/project/infiniteBoards/InfiniteBoards.jpg"
+        "../../images/project/infiniteBoards/InfiniteBoards.jpg",
     ]
 ---
 

@@ -17,7 +17,7 @@ const ProjectSection: FC<Props> = props => {
                         short
                         demo
                         order
-                        images {
+                        thumbnail {
                             childImageSharp {
                                 fluid(
                                     maxWidth: 500
@@ -56,8 +56,8 @@ const ProjectSection: FC<Props> = props => {
                     slug={proj.fields?.slug ?? "Slug missing"}
                     demo={proj.frontmatter?.demo}
                     fluidImage={
-                        proj.frontmatter?.images !== null
-                            ? (proj.frontmatter?.images[0]?.childImageSharp
+                        proj.frontmatter?.thumbnail !== null
+                            ? (proj.frontmatter?.thumbnail?.childImageSharp
                                   ?.fluid as FluidObject)
                             : undefined
                     }
