@@ -1,7 +1,7 @@
 ---
 title: "Separable Subsurface Scattering in VR"
 short: "SSSS implemented for Unity and VR"
-order: 3
+order: 1
 thumbnail: "../../images/project/ssss/ssss1.jpg"
 landing: { image: "../../images/project/ssss/ssss.png" }
 images:
