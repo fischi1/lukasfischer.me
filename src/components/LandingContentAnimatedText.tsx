@@ -20,8 +20,6 @@ const LandingContentAnimatedText: FC<Props> = props => {
         const myfunc = () => {
             myIterationCounter.current++
 
-            console.log(myIterationCounter.current)
-
             if (myIterationCounter.current % 2 == 0) {
                 if (ref.current) {
                     ref.current.classList.remove("animated")
@@ -29,7 +27,6 @@ const LandingContentAnimatedText: FC<Props> = props => {
                     ref.current.classList.add("animated")
                     setIndex(index + 1)
                 }
-                console.log("animationend", ref.current)
             }
         }
 

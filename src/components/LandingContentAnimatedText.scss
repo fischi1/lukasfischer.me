@@ -62,10 +62,19 @@ $timingFunc: cubic-bezier(0.73, 0.02, 0.21, 0.97);
         & > .landing-highlighted:nth-of-type(2) {
             animation:  first   $slideDuration  $timingFunc  $slideDelay 1 normal forwards,
                         hide    $hideDuration   $timingFunc  ($slideDelay + $hideDelay) 1 normal forwards;
+                        
+            @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) { 
+                animation: none;
+            }
         }
         & > .landing-highlighted:nth-of-type(1) {
             animation: first $slideDuration $timingFunc $slideDelay 1 normal forwards,
                 show    $hideDuration   $timingFunc  ($slideDuration - $hideDuration - $hideDelay + $slideDelay) 1 normal both;
+                        
+            @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) { 
+                animation: none;
+                visibility: hidden;
+            }
         }
 
         .spacing-div {

@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import GalleryPreviewThumbnail from "./GalleryPreviewThumbnail"
 import LightboxWrapper from "./LightboxWrapper"
 import "./ProjectGallery.scss"
+import isWebpSupported from "../isWebpSupported"
 
 type Props = {
     images: FluidObject[]
@@ -18,7 +19,9 @@ const ProjectGallery: FC<Props> = props => {
         setOpen(true)
     }
 
-    const srcArr = props.images.map(image => image.srcWebp + "")
+    const srcArr = isWebpSupported
+        ? props.images.map(image => image.srcWebp + "")
+        : props.images.map(image => image.src + "")
 
     const memoizedThumbnails = useMemo(
         () => (

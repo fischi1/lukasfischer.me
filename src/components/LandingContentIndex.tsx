@@ -12,7 +12,7 @@ const LandingContentIndex: FC<Props> = props => (
                 <LandingContentAnimatedText />
             </h1>
         </div>
-        <div id="landing-subtext" className="d-flex flex-column flex-sm-row">
+        <div id="landing-subtext" className="d-flex flex-column flex-sm-row justify-content-center">
             <div className="lead-container">
                 <p className="lead">
                     Front end
