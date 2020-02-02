@@ -10,7 +10,7 @@ const Portrait: FC<Props> = () => {
         query {
             portrait: file(relativePath: { eq: "images/fischi.png" }) {
                 childImageSharp {
-                    fluid(maxWidth: 1080, quality: 90, base64Width: 50) {
+                    fluid(maxWidth: 540, quality: 90, base64Width: 50) {
                         ...GatsbyImageSharpFluid_withWebp
                     }
                 }

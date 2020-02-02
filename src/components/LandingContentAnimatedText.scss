@@ -47,7 +47,7 @@ $hideDelay: .125s;
 $timingFunc: cubic-bezier(0.73, 0.02, 0.21, 0.97);
 
 .landing-hightlighted-container {
-    transform: translateY(33.33%);
+    transform: translateY(-33.33%);
 
     @include media-breakpoint-down(xs) {
         transform: translateY(-33.33%);

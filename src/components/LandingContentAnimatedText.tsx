@@ -6,7 +6,8 @@ type Props = {}
 const phrases = [
     "developing experiences",
     "making stuff work",
-    "solving problems"
+    "solving problems",
+    "learning new things"
 ]
 
 const LandingContentAnimatedText: FC<Props> = props => {
@@ -47,9 +48,9 @@ const LandingContentAnimatedText: FC<Props> = props => {
             ref={ref}
         >
             <div className="landing-highlighted">
-                {phrases[(index + 1) % 3]}
+                {phrases[(index + 1) % phrases.length]}
             </div>
-            <div className="landing-highlighted">{phrases[index % 3]}</div>
+            <div className="landing-highlighted">{phrases[index % phrases.length]}</div>
             <div className="spacing-div">{phrases[0]}</div>
         </div>
     )
