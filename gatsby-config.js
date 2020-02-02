@@ -34,14 +34,29 @@ module.exports = {
         {
             resolve: `gatsby-plugin-graphql-codegen`,
             options: {
-              fileName: `types/graphql-types.ts`,
-              documentPaths: [
-                './src/**/*.{ts,tsx}',
-                './node_modules/gatsby-*/**/*.js',
-              ],
-              codegenDelay: 200,
+                fileName: `types/graphql-types.ts`,
+                documentPaths: [
+                    "./src/**/*.{ts,tsx}",
+                    "./node_modules/gatsby-*/**/*.js"
+                ],
+                codegenDelay: 200
             }
         },
-        `gatsby-transformer-remark`
+        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            options: {
+                fonts: [
+                    {
+                        family: `Montserrat`,
+                    },
+                    {
+                        family: `Ubuntu`,
+                        variants: [`400`, `500`]
+                    }
+                ],
+                fontDisplay: `swap`
+            }
+        }
     ]
 }
