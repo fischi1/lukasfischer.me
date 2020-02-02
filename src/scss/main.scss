@@ -26,7 +26,7 @@ $input-btn-padding-y: 0;
 $input-btn-padding-x: .5rem;
 $primary: $grad-color-1;
 
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "./bootstrap.scss";
 
 body {
     min-width: 320px;
