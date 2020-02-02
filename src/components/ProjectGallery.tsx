@@ -25,9 +25,9 @@ const ProjectGallery: FC<Props> = props => {
 
     const memoizedThumbnails = useMemo(
         () => (
-            <Row noGutters>
+            <Row>
                 {props.images.map((img, i) => (
-                    <Col xs={6} md={4} xl={3} key={img.src}>
+                    <Col xs={6} md={4} xl={3} className="px-0" key={img.src}>
                         <GalleryPreviewThumbnail
                             fluid={img}
                             onClick={() => openImage(i)}
