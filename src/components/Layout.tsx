@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React, { FC } from "react"
 import Header from "./Header"
+import useDebugOutline from "../hooks/useDebugOutline"
 
 const Layout: FC<{}> = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -14,6 +15,8 @@ const Layout: FC<{}> = ({ children }) => {
             }
         }
     `)
+
+    useDebugOutline()
 
     return (
         <>
