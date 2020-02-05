@@ -2,6 +2,7 @@ import clsx from "clsx"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import React, { FC } from "react"
+import HeaderPlaceholder from "./HeaderPlaceholder"
 import "./Landing.scss"
 
 type Props = {
@@ -33,9 +34,7 @@ const Landing: FC<Props> = props => {
                     props.fullHeight
             })}
         >
-            {!props.fullHeight && (
-                <div className="header-placeholder">&nbsp;</div>
-            )}
+            {!props.fullHeight && <HeaderPlaceholder />}
             {props.children}
         </BackgroundImage>
     )

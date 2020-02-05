@@ -22,17 +22,25 @@ const IndexPage: FC<Props> = props => (
             <Portrait />
 
             <p>
-                I currently live in Vienna, Austria. My interest in coding and
-                software development started very early with the age of 12,
-                thanks to my fascination in video games. Shortly after that I
-                started to teach myself HTML and CSS. This also led me to choose
-                a technical school career.
+                <b>Welcome!</b>
+                <br />
+                I'm Lukas from Vienna, Austria! A software engineer who
+                understands the importance of UX. Always learning, always
+                improving...
             </p>
 
             <p>
-                I’m interested in front-end, back-end, web and app development,
-                UX design, video game dev and computer graphics. This also lead
-                to the topics of my matriculation project and bachelor thesis.
+                My interest in coding and software development started very
+                early, thanks to my fascination in computers and video games.
+                Shortly after that I started to teach myself HTML and CSS.
+                Everything went hand in hand and led me to choose a technical
+                school career.
+            </p>
+
+            <p>
+                I'm interested in a wide range of topics including front-end,
+                back-end, web and app development, UX design, video game dev and
+                computer graphics.
             </p>
 
             <div className="clearfix">&nbsp;</div>
