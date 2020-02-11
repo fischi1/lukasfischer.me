@@ -19,9 +19,10 @@ images:
 
 **Infinite Boards** is an Augmented Reality board game for Android devices. Through AR this application combines a board game with minigames. It can be enjoyed with up to four players locally or against virtual opponents.
 
-This project was the thesis for my matriculation at HTL Wels in 2015. When we were able to show it off and let people play the game, we got very positive feedback. We were able to watch how people really enjoyed our virtual playing fields. Infinite Boards also achieved first place in two competitions for HTL projects.
+This project was the thesis for my matriculation at HTL Wels in 2015. When we were able to show it off and let people play the game, we got very positive feedback. We were able to watch how people really enjoyed our game boards. Infinite Boards also achieved first place in two competitions for HTL projects.
 
-The thesis was done together with Sophie Klein. My responsibilities were the technical implementation, testing and game design.
+The thesis was done together with Sophie Klein.  
+My responsibilities were the technical implementation, game design and testing.
 
 <bs-row>
 
