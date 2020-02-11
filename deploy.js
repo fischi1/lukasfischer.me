@@ -2,6 +2,8 @@ const ghpages = require("gh-pages")
 const packagejson = require("./package.json")
 const dotenv = require("dotenv")
 
+console.log("deploying via gh-pages")
+
 dotenv.config()
 
 if (!process.env.DEPLOY_REPOSITORY || !process.env.DEPLOY_BRANCH) {
