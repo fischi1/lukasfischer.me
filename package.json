@@ -1,6 +1,6 @@
 {
   "name": "lukasfischer.me",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "@types/react-bootstrap": "^0.32.20",
     "@types/react-helmet": "^5.0.15",
