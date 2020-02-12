@@ -16,7 +16,7 @@ const MailIcon: FC<Props> = ({ color = "var(--white)", opacity = 1 }) => {
             transform="scale(1.5)"
         >
             <path
-                style={{fill: color}}
+                style={{ fill: color }}
                 stroke="none"
                 strokeOpacity="1"
                 strokeWidth="0"

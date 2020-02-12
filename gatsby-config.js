@@ -48,7 +48,7 @@ module.exports = {
             options: {
                 fonts: [
                     {
-                        family: `Montserrat`,
+                        family: `Montserrat`
                     },
                     {
                         family: `Ubuntu`,

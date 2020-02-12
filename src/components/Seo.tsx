@@ -3,13 +3,18 @@ import React, { FC } from "react"
 import Helmet from "react-helmet"
 
 type Props = {
-    description?: string,
-    lang?: string,
-    meta?: Array<{name: string, content: string}>,
+    description?: string
+    lang?: string
+    meta?: Array<{ name: string; content: string }>
     title: string
 }
 
-const SEO: FC<Props> = ({ description = "", lang = "en", meta = [], title}) => {
+const SEO: FC<Props> = ({
+    description = "",
+    lang = "en",
+    meta = [],
+    title
+}) => {
     const { site } = useStaticQuery(
         graphql`
             query {

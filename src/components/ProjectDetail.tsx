@@ -29,7 +29,10 @@ const ProjectDetail: FC<Props> = props => (
             )}
         >
             <div className="project-image">
-                <Link to={props.slug} aria-label={`Read more about "${props.title}"`}>
+                <Link
+                    to={props.slug}
+                    aria-label={`Read more about "${props.title}"`}
+                >
                     <AspectRatioDiv ratio={2 / 3}>
                         <BackgroundImage
                             role="img"

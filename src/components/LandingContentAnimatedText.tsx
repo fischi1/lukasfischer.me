@@ -50,7 +50,9 @@ const LandingContentAnimatedText: FC<Props> = props => {
             <div className="landing-highlighted">
                 {phrases[(index + 1) % phrases.length]}
             </div>
-            <div className="landing-highlighted">{phrases[index % phrases.length]}</div>
+            <div className="landing-highlighted">
+                {phrases[index % phrases.length]}
+            </div>
             <div className="spacing-div">{phrases[0]}</div>
         </div>
     )

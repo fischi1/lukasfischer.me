@@ -5,9 +5,7 @@ import SectionHeading from "../components/SectionHeading"
 import TargetBlankLink from "../components/TargetBlankLink"
 
 const ProjectRow: FC<{}> = props => (
-    <Row className="justify-content-center">
-        {props.children}
-    </Row>
+    <Row className="justify-content-center">{props.children}</Row>
 )
 
 const ProjectCol: FC<{}> = props => (

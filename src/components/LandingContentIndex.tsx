@@ -8,11 +8,15 @@ const LandingContentIndex: FC<Props> = props => (
     <div id="landing-content-index">
         <div id="landing-text">
             <h1>
-                <span className="text-nowrap">I like</span><br/>
+                <span className="text-nowrap">I like</span>
+                <br />
                 <LandingContentAnimatedText />
             </h1>
         </div>
-        <div id="landing-subtext" className="d-flex flex-column flex-sm-row justify-content-center">
+        <div
+            id="landing-subtext"
+            className="d-flex flex-column flex-sm-row justify-content-center"
+        >
             <div className="lead-container">
                 <p className="lead px-0">
                     Front end

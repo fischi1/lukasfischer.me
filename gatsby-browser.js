@@ -15,7 +15,7 @@ export const onClientEntry = () => {
         "display: block;",
         "font-family: monospace"
     ].join(";")
-    
+
     console.log("%cHello 👋😃", styles)
     console.log("%cInterested in the source code? ⚛️", styles)
     console.log(
