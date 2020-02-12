@@ -1,18 +1,10 @@
-import React, { FC } from "react"
+import React, { FC, AnchorHTMLAttributes } from "react"
 
-type Props = {
-    href?: string
-    className?: string
-}
+type Props = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "target" | "rel">
 
-const TargetBlankLink: FC<Props> = props => (
-    <a
-        href={props.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={props.className}
-    >
-        {props.children}
+const TargetBlankLink: FC<Props> = ({ children, ...restProps }) => (
+    <a target="_blank" rel="noopener noreferrer" {...restProps}>
+        {children}
     </a>
 )
 

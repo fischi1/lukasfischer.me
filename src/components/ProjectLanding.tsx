@@ -35,7 +35,7 @@ const ProjectLanding: FC<Props> = props => {
                 <div className="pb-5">
                     <AspectRatioDiv>
                         <BackgroundImage
-                            role="image"
+                            role="img"
                             alt={title}
                             Tag="div"
                             fluid={image}

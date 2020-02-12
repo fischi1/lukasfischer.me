@@ -11,9 +11,14 @@ type Props = {
 
 const IconLink: FC<Props> = ({ type, href }) => {
     return (
-        <TargetBlankLink href={href} className="icon-link">
-            {type === "twitter" && <TwitterIcon />}
-            {type === "mail" && <MailIcon />}
+        <TargetBlankLink
+            href={href}
+            className="icon-link"
+            aria-label={
+                type === "twitter" ? "Visit me on Twitter" : "Write me an email"
+            }
+        >
+            {type === "twitter" ? <TwitterIcon /> : <MailIcon />}
         </TargetBlankLink>
     )
 }
