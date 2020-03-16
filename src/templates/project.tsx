@@ -7,7 +7,7 @@ import Landing from "../components/Landing"
 import Layout from "../components/Layout"
 import ProjectGallery from "../components/ProjectGallery"
 import ProjectLanding from "../components/ProjectLanding"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 import projectAstCompiler from "./projectAstCompiler"
 
 type Props = {

@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 import Portrait from "../components/Portrait"
 import ProjectSection from "../components/ProjectSection"
 import SectionHeading from "../components/SectionHeading"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 type Props = {}
 
