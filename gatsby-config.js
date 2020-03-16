@@ -4,7 +4,8 @@ module.exports = {
         description: `Hello! I'm a software engineer from Vienna, Austria who loves learning and developing experiences`,
         author: `@fischinator`,
         twitterUrl: `https://twitter.com/Fischinator`,
-        websiteMail: `mail@lukasfischer.me`
+        websiteMail: `mail@lukasfischer.me`,
+        origin: `https://lukasfischer.me`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,

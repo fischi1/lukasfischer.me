@@ -17,6 +17,11 @@ type Props = {
 const ProjectTemplate: FC<Props> = props => {
     const frontmatter = props.data.markdownRemark?.frontmatter
     const htmlAst = props.data.markdownRemark?.htmlAst
+    const excerpt = props.data.markdownRemark?.excerpt
+    const thumbnailImage =
+        props.data.markdownRemark?.frontmatter?.thumbnail?.childImageSharp
+            ?.fluid?.src
+    const slug = props.data.markdownRemark?.fields?.slug
 
     const title = frontmatter?.title ?? "Title missing"
 
@@ -29,7 +34,12 @@ const ProjectTemplate: FC<Props> = props => {
 
     return (
         <Layout>
-            <SEO title={title} />
+            <SEO
+                title={title}
+                description={excerpt}
+                image={thumbnailImage}
+                slug={slug}
+            />
             <Landing>
                 <ProjectLanding frontmatter={frontmatter} />
             </Landing>
@@ -48,6 +58,7 @@ export const query = graphql`
     query ProjectTemplate($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             htmlAst
+            excerpt(pruneLength: 300)
             frontmatter {
                 title
                 landing {
@@ -64,6 +75,13 @@ export const query = graphql`
                         }
                     }
                 }
+                thumbnail {
+                    childImageSharp {
+                        fluid(maxWidth: 1920, quality: 90) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
                 images {
                     childImageSharp {
                         fluid(maxWidth: 2560, quality: 90, base64Width: 50) {
@@ -71,6 +89,9 @@ export const query = graphql`
                         }
                     }
                 }
+            }
+            fields {
+                slug
             }
         }
     }

@@ -15,7 +15,7 @@ const IndexPage: FC<Props> = props => (
         <Landing fullHeight>
             <LandingContentIndex />
         </Landing>
-        <SEO title="Home" />
+        <SEO title="Lukas Fischer" />
         <Container>
             <SectionHeading displayAsH1>About me</SectionHeading>
 
