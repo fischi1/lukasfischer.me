@@ -47,6 +47,6 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
     "clean": "gatsby clean",
     "serve": "npx serve public",
-    "deploy": "npm version patch -m \"version %s\" && node ./deploy.js"
+    "deploy": "npm version patch -m \"version %s\" && npm run build && node ./deploy.js"
   }
 }
