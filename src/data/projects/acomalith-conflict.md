@@ -1,7 +1,7 @@
 ---
 title: "Acomalith Conflict"
 short: "Challenging puzzle platformer"
-order: 2
+order: 3
 thumbnail: "../../images/project/acomalithConflict/acomalithConflict1080.png"
 landing: { video: https://www.youtube-nocookie.com/embed/pTnwplTrKP4 }
 images:
