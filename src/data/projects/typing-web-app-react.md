@@ -20,8 +20,7 @@ images:
     ]
 ---
 
-A typing trainer that runs in your browser.  
-Features 50 lessons that unlock as you make progress and graphs that keep track your successfully completed lessons, accuracy and typing speed. Collect gems and increase your level by completing lessons.
+A typing trainer that runs in your browser. Features 50 lessons that unlock as you make progress and graphs that keep track of your successfully completed lessons, accuracy and typing speed. Collect gems and increase your level by completing lessons.
 
 I started this project because I wanted to experiment combining react with other programming patterns. A typing trainer offered itself for that, because the typing and the management around the learning experience can be clearly separated. The result was an application implemented with react, where the lessons were realized with an entity-component approach. This pattern is typically used in game development. Rendering of the typing lessons is done with PixiJS.
 
