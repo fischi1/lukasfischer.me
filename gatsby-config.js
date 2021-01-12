@@ -20,7 +20,6 @@ module.exports = {
                 icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
             }
         },
-        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -28,6 +27,7 @@ module.exports = {
                 path: `${__dirname}/src`
             }
         },
+        `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-sass`,
