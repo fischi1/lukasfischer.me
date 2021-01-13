@@ -17,7 +17,7 @@ module.exports = {
                 background_color: `#040507`,
                 theme_color: `#040507`,
                 display: `minimal-ui`,
-                icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+                icon: `src/images/favicon.png` // This path is relative to the root of the site.
             }
         },
         {
@@ -27,10 +27,17 @@ module.exports = {
                 path: `${__dirname}/src`
             }
         },
+        {
+            resolve: `gatsby-plugin-graphql-codegen`,
+            options: {
+                fileName: `types/graphql-types.ts`
+            }
+        },
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-sass`,
+        `gatsby-transformer-remark`,
         `gatsby-transformer-remark`
     ]
 }
