@@ -1,0 +1,9 @@
+.landing-component,
+.landing-component::after,
+.landing-component::before {
+    background-attachment: fixed;
+}
+
+.landing-component-full-height {
+    height: 100vh;
+}
