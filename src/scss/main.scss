@@ -1,7 +1,7 @@
-// @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap");
 
-$white: #EEF1EF;
+$white: #eef1ef;
 $black: #040507;
 $card-bg: #002642;
 
@@ -11,8 +11,8 @@ $grad-color-2: #e4572e;
 $enable-rounded: false;
 $body-bg: $black;
 $body-color: $white;
-$font-family-sans-serif: 'Montserrat', sans-serif;;
-$headings-font-family: 'Ubuntu', sans-serif;
+$font-family-sans-serif: "Montserrat", sans-serif;
+$headings-font-family: "Ubuntu", sans-serif;
 $line-height-base: 2;
 $card-border-color: none;
 $card-inner-border-radius: 0;
@@ -23,7 +23,7 @@ $input-btn-font-family: $headings-font-family;
 $btn-font-weight: 700;
 $input-btn-border-width: 0;
 $input-btn-padding-y: 0;
-$input-btn-padding-x: .5rem;
+$input-btn-padding-x: 0.5rem;
 $primary: $grad-color-1;
 
 @import "./bootstrap.scss";

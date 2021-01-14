@@ -30,7 +30,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-graphql-codegen`,
             options: {
-                fileName: `types/graphql-types.ts`
+                fileName: `types/graphql-types.ts`,
+                codegenDelay: 0
             }
         },
         `gatsby-plugin-react-helmet`,

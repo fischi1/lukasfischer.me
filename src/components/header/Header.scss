@@ -1,0 +1,31 @@
+@import "../../scss/main.scss";
+@import "../../scss/mixins.scss";
+
+#header-component {
+    background-color: $black;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    #header-title {
+        font-family: $headings-font-family;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.5em;
+        @include font-gradient;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .mail {
+        display: inline-block;
+    }
+
+    .twitter {
+        display: inline-block;
+        margin-left: 1.6rem;
+    }
+}
