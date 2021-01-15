@@ -1,0 +1,19 @@
+@import "../../scss/mixins.scss";
+
+.ril-toolbar {
+    background: none !important;
+}
+
+.ril-close {
+    display: none;
+}
+
+.ril__navButtons {
+    opacity: 1 !important;
+    &:focus {
+        outline: 1px solid rgba($grad-color-1, 0.5) !important;
+    }
+    @include media-breakpoint-down(sm) {
+        top: auto !important;
+    }
+}

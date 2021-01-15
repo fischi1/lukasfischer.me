@@ -3,10 +3,12 @@ import React, { FC } from "react"
 import { Container } from "react-bootstrap"
 import { ProjectTemplateQuery } from "../../types/graphql-types"
 import BackButton from "../components/button/BackButton"
+import Gallery from "../components/gallery/Gallery"
 import Landing from "../components/landing/Landing"
 import Layout from "../components/layout/Layout"
 import ProjectLanding from "../components/projectLanding/ProjectLanding"
 import SEO from "../components/seo/SEO"
+import projectAstCompiler from "../functions/projectAstCompiler"
 
 type Props = {
     data: ProjectTemplateQuery
@@ -42,13 +44,12 @@ const ProjectTemplate: FC<Props> = (props) => {
                 <ProjectLanding frontmatter={frontmatter} />
             </Landing>
             <Container className="pt-5">
-                {/* {projectAstCompiler(htmlAst)} */}
-                <p>Hello world</p>
+                {projectAstCompiler(htmlAst)}
                 <div className="my-3 mt-5">
                     <BackButton />
                 </div>
             </Container>
-            {/* {imgArray && <ProjectGallery images={imgArray} />} */}
+            {imgArray && <Gallery images={imgArray} />}
         </Layout>
     )
 }
