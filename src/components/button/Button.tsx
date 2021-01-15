@@ -7,7 +7,7 @@ type Props = {
     onClick?: (e: MouseEvent) => void
 }
 
-const Button: FC<Props> = props => (
+const Button: FC<Props> = (props) => (
     <button
         className={clsx("btn btn-primary btn-gradient", props.className)}
         type="button"
