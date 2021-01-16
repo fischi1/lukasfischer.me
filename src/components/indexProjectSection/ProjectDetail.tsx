@@ -1,7 +1,6 @@
 import clsx from "clsx"
 import { Link } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import { FluidObject } from "gatsby-image"
+import GatsbyImage, { FluidObject } from "gatsby-image"
 import React, { FC } from "react"
 import AspectRatioDiv from "../aspectRationDiv/AspectRatioDiv"
 import ButtonLink from "../button/ButtonLink"
@@ -18,30 +17,30 @@ type Props = {
     last?: boolean
 }
 
-const ProjectDetail: FC<Props> = (props) => (
+const ProjectDetail: FC<Props> = ({
+    title,
+    short,
+    demo,
+    slug,
+    fluidImage,
+    flipped,
+    last
+}) => (
     <>
         <div
             className={clsx(
                 "project-detail my-3 d-flex flex-column flex-md-row",
                 {
-                    "flex-md-row-reverse": props.flipped
+                    "flex-md-row-reverse": flipped
                 }
             )}
         >
             <div className="project-image">
-                <Link
-                    to={props.slug}
-                    aria-label={`Read more about "${props.title}"`}
-                >
+                <Link to={slug} aria-label={`Read more about "${title}"`}>
                     <AspectRatioDiv ratio={2 / 3}>
-                        <BackgroundImage
-                            role="img"
-                            alt={props.title}
-                            Tag="div"
-                            fluid={props.fluidImage}
-                            backgroundColor={`#040507`}
-                            style={{ width: "100%", height: "100%" }}
-                        />
+                        {fluidImage && (
+                            <GatsbyImage fluid={fluidImage} alt={title} />
+                        )}
                     </AspectRatioDiv>
                 </Link>
             </div>
@@ -49,28 +48,24 @@ const ProjectDetail: FC<Props> = (props) => (
             <div
                 className={clsx(
                     "project-content d-flex align-items-center text-center text-md-left",
-                    { "text-md-right flex-row-reverse": props.flipped }
+                    { "text-md-right flex-row-reverse": flipped }
                 )}
             >
                 <div className="w-100">
-                    <h2 className="h3">{props.title}</h2>
-                    <p className="mb-2 mb-md-5">{props.short}</p>
+                    <h2 className="h3">{title}</h2>
+                    <p className="mb-2 mb-md-5">{short}</p>
                     <div>
-                        {props.demo && (
-                            <ButtonLink
-                                external
-                                className="mr-3"
-                                to={props.demo}
-                            >
+                        {demo && (
+                            <ButtonLink external className="mr-3" to={demo}>
                                 Demo
                             </ButtonLink>
                         )}
-                        <ButtonLink to={props.slug}>More ...</ButtonLink>
+                        <ButtonLink to={slug}>More ...</ButtonLink>
                     </div>
                 </div>
             </div>
         </div>
-        {!props.last && (
+        {!last && (
             <div className="text-center">
                 <ProjectDivider className="my-5" />
             </div>

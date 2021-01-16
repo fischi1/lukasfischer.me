@@ -7,10 +7,14 @@ import ProjectDetail from "./ProjectDetail"
 
 type Props = {}
 
-const ProjectSection: FC<Props> = (props) => {
+const ProjectSection: FC<Props> = () => {
     const data = useStaticQuery(graphql`
         query ProjectSection {
-            allMarkdownRemark {
+            allMarkdownRemark(
+                filter: {
+                    fileAbsolutePath: { glob: "**/data/projects/**/*.md" }
+                }
+            ) {
                 nodes {
                     frontmatter {
                         title
@@ -20,9 +24,11 @@ const ProjectSection: FC<Props> = (props) => {
                         thumbnail {
                             childImageSharp {
                                 fluid(
-                                    maxWidth: 500
+                                    maxWidth: 510
+                                    maxHeight: 340
                                     quality: 90
                                     base64Width: 50
+                                    cropFocus: CENTER
                                 ) {
                                     ...GatsbyImageSharpFluid_withWebp
                                 }
