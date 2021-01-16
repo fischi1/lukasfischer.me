@@ -9,17 +9,17 @@ type Props = {
     onClick: () => void
 }
 
-const GalleryThumbnail: FC<Props> = (props) => (
+const GalleryThumbnail: FC<Props> = ({ fluid, onClick }) => (
     <div
         className="gallery-thumbnail m-1"
-        onClick={props.onClick}
+        onClick={onClick}
         role="button"
         aria-label="View image"
     >
         <AspectRatioDiv ratio={2 / 3}>
             <BackgroundImage
                 Tag="div"
-                fluid={props.fluid}
+                fluid={fluid}
                 backgroundColor="#040507"
                 style={{ width: "100%", height: "100%" }}
             />

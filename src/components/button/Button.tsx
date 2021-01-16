@@ -7,13 +7,13 @@ type Props = {
     onClick?: (e: MouseEvent) => void
 }
 
-const Button: FC<Props> = (props) => (
+const Button: FC<Props> = ({ className, onClick, children }) => (
     <button
-        className={clsx("btn btn-primary btn-gradient", props.className)}
+        className={clsx("btn btn-primary btn-gradient", className)}
         type="button"
-        onClick={props.onClick}
+        onClick={onClick}
     >
-        {props.children}
+        {children}
     </button>
 )
 

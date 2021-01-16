@@ -12,22 +12,22 @@ type Props = {
     frontmatter: Markdown["frontmatter"] | null | undefined
 }
 
-const ProjectLanding: FC<Props> = (props) => {
-    const image = props.frontmatter?.landing?.image?.childImageSharp?.fluid as
+const ProjectLanding: FC<Props> = ({ frontmatter }) => {
+    const image = frontmatter?.landing?.image?.childImageSharp?.fluid as
         | FluidObject
         | undefined
 
-    const title = props.frontmatter?.title ?? "title missing"
+    const title = frontmatter?.title ?? "title missing"
 
     return (
         <Container>
             <div className="text-center">
                 <h1 className="font-gradient my-5 d-inline-block">{title}</h1>
             </div>
-            {props.frontmatter?.landing?.video && (
+            {frontmatter?.landing?.video && (
                 <VideoIframe
                     className="pb-5"
-                    src={props.frontmatter?.landing?.video ?? ""}
+                    src={frontmatter?.landing?.video ?? ""}
                 />
             )}
             {image && (

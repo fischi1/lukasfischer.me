@@ -10,7 +10,7 @@ type Props = {
     images: FluidObject[]
 }
 
-const Gallery: FC<Props> = (props) => {
+const Gallery: FC<Props> = ({ images }) => {
     const [open, setOpen] = useState(false)
     const [imageIndex, setImageIndex] = useState(0)
 
@@ -20,13 +20,13 @@ const Gallery: FC<Props> = (props) => {
     }
 
     const srcArr = isWebpSupported
-        ? props.images.map((image) => image.srcWebp + "")
-        : props.images.map((image) => image.src + "")
+        ? images.map((image) => image.srcWebp + "")
+        : images.map((image) => image.src + "")
 
     const memoizedThumbnails = useMemo(
         () => (
             <Row>
-                {props.images.map((img, i) => (
+                {images.map((img, i) => (
                     <Col xs={6} md={4} xl={3} className="px-0" key={img.src}>
                         <GalleryThumbnail
                             fluid={img}
@@ -36,7 +36,7 @@ const Gallery: FC<Props> = (props) => {
                 ))}
             </Row>
         ),
-        [props.images]
+        [images]
     )
 
     return (

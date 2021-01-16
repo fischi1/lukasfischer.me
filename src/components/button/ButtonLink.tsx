@@ -10,19 +10,19 @@ type Props = {
     external?: boolean
 }
 
-const ButtonLink: FC<Props> = (props) => {
-    const className = clsx("btn btn-primary btn-gradient", props.className)
+const ButtonLink: FC<Props> = ({ className, external, to, children }) => {
+    const buttonClassName = clsx("btn btn-primary btn-gradient", className)
 
-    if (props.external)
+    if (external)
         return (
-            <ExternalLink className={className} href={props.to}>
-                {props.children}
+            <ExternalLink className={buttonClassName} href={to}>
+                {children}
             </ExternalLink>
         )
 
     return (
-        <Link className={className} to={props.to}>
-            {props.children}
+        <Link className={buttonClassName} to={to}>
+            {children}
         </Link>
     )
 }

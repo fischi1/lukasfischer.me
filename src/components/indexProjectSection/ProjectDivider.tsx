@@ -6,8 +6,8 @@ type Props = {
     className?: string
 }
 
-const ProjectDivider: FC<Props> = props => {
-    return <div className={clsx("project-divider", props.className)} />
+const ProjectDivider: FC<Props> = ({ className }) => {
+    return <div className={clsx("project-divider", className)} />
 }
 
 export default ProjectDivider

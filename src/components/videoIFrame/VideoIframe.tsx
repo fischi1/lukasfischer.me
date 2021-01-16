@@ -8,10 +8,10 @@ type Props = {
     src?: string
 }
 
-const VideoIframe: FC<Props> = (props) => (
-    <div className={clsx("video-iframe", props.className)}>
+const VideoIframe: FC<Props> = ({ className, src }) => (
+    <div className={clsx("video-iframe", className)}>
         <AspectRatioDiv className="video-bg-container">
-            <iframe src={props.src} frameBorder={0} allowFullScreen></iframe>
+            <iframe src={src} frameBorder={0} allowFullScreen></iframe>
         </AspectRatioDiv>
     </div>
 )
