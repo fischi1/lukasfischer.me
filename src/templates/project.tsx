@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import React, { FC } from "react"
 import { Container } from "react-bootstrap"
 import { ProjectTemplateQuery } from "../../types/graphql-types"
@@ -10,18 +10,13 @@ import ProjectLanding from "../components/projectLanding/ProjectLanding"
 import SEO from "../components/seo/SEO"
 import projectAstCompiler from "../functions/projectAstCompiler"
 
-type Props = {
-    data: ProjectTemplateQuery
-}
-
-const ProjectTemplate: FC<Props> = (props) => {
-    const frontmatter = props.data.markdownRemark?.frontmatter
-    const htmlAst = props.data.markdownRemark?.htmlAst
-    const excerpt = props.data.markdownRemark?.excerpt
+const ProjectTemplate: FC<PageProps<ProjectTemplateQuery>> = ({ data }) => {
+    const frontmatter = data.markdownRemark?.frontmatter
+    const htmlAst = data.markdownRemark?.htmlAst
+    const excerpt = data.markdownRemark?.excerpt
     const thumbnailImage =
-        props.data.markdownRemark?.frontmatter?.thumbnail?.childImageSharp
-            ?.fluid?.src
-    const slug = props.data.markdownRemark?.fields?.slug
+        data.markdownRemark?.frontmatter?.thumbnail?.childImageSharp?.fluid?.src
+    const slug = data.markdownRemark?.fields?.slug
 
     const title = frontmatter?.title ?? "Title missing"
 
@@ -54,9 +49,7 @@ const ProjectTemplate: FC<Props> = (props) => {
     )
 }
 
-export default ProjectTemplate
-
-export const query = graphql`
+const query = graphql`
     query ProjectTemplate($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             htmlAst
@@ -98,3 +91,7 @@ export const query = graphql`
         }
     }
 `
+
+export default ProjectTemplate
+
+export { query }

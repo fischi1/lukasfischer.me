@@ -6,25 +6,29 @@ import "./Header.scss"
 
 type Props = {
     title: string
-    twitterHref: string
-    mailHref: string
+    twitterHref?: string
+    mailHref?: string
 }
 
-const Header: FC<Props> = (props) => (
+const Header: FC<Props> = ({ title, mailHref, twitterHref }) => (
     <Navbar id="header-component">
         <Navbar.Brand id="header-title">
-            <Link to="/">{props.title}</Link>
+            <Link to="/">{title}</Link>
         </Navbar.Brand>
 
         <Navbar.Text className="mr-auto">&nbsp;</Navbar.Text>
 
         <Navbar.Text className="text-nowrap">
-            <span className="mail">
-                <IconLink type="mail" href={props.mailHref} />
-            </span>
-            <span className="twitter">
-                <IconLink type="twitter" href={props.twitterHref} />
-            </span>
+            {mailHref && (
+                <span className="mail">
+                    <IconLink type="mail" href={mailHref} />
+                </span>
+            )}
+            {twitterHref && (
+                <span className="twitter">
+                    <IconLink type="twitter" href={twitterHref} />
+                </span>
+            )}
         </Navbar.Text>
     </Navbar>
 )

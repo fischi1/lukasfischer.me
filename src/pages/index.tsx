@@ -1,6 +1,7 @@
-import { PageProps } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import React, { FC } from "react"
 import { Container } from "react-bootstrap"
+import { IndexQuery } from "../../types/graphql-types"
 import ProjectSection from "../components/indexProjectSection/ProjectSection"
 import Landing from "../components/landing/Landing"
 import LandingContentIndex from "../components/landing/LandingContentIndex"
@@ -8,47 +9,44 @@ import Layout from "../components/layout/Layout"
 import Portrait from "../components/portrait/Portrait"
 import SectionHeading from "../components/sectionHeading/SectionHeading"
 import SEO from "../components/seo/SEO"
+import projectAstCompiler from "../functions/projectAstCompiler"
 
-const IndexPage: FC<PageProps> = () => (
-    <Layout>
-        <SEO title="Lukas Fischer" />
-        <Landing fullHeight>
-            <LandingContentIndex />
-        </Landing>
-        <Container>
-            <SectionHeading headingClassName="h1">About me</SectionHeading>
+const IndexPage: FC<PageProps<IndexQuery>> = ({ data }) => {
+    const aboutMeAst = data.file?.childMarkdownRemark?.htmlAst
 
-            <Portrait />
+    return (
+        <Layout>
+            <SEO title="Lukas Fischer" />
+            <Landing fullHeight>
+                <LandingContentIndex />
+            </Landing>
+            <Container>
+                <SectionHeading headingClassName="h1">About me</SectionHeading>
 
-            <p>
-                <b>Welcome!</b>
-                <br />
-                I'm Lukas from Vienna, Austria! A software engineer who
-                understands the importance of UX. Always learning, always
-                improving...
-            </p>
+                <Portrait />
 
-            <p>
-                My interest in coding and software development started very
-                early, thanks to my fascination in computers and video games.
-                Shortly after that I started to teach myself HTML and CSS.
-                Everything went hand in hand and led me to choose a technical
-                school career.
-            </p>
+                {projectAstCompiler(aboutMeAst)}
 
-            <p>
-                I'm interested in a wide range of topics including front-end,
-                back-end, web and app development, UX design, video game dev and
-                computer graphics.
-            </p>
+                <div className="clearfix">&nbsp;</div>
 
-            <div className="clearfix">&nbsp;</div>
+                <SectionHeading headingClassName="h1">Projects</SectionHeading>
 
-            <SectionHeading headingClassName="h1">Projects</SectionHeading>
+                <ProjectSection />
+            </Container>
+        </Layout>
+    )
+}
 
-            <ProjectSection />
-        </Container>
-    </Layout>
-)
+const query = graphql`
+    query Index {
+        file(relativePath: { eq: "data/about-me.md" }) {
+            childMarkdownRemark {
+                htmlAst
+            }
+        }
+    }
+`
 
 export default IndexPage
+
+export { query }

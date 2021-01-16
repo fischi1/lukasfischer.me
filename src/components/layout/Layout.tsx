@@ -20,7 +20,7 @@ const Layout: FC<{}> = ({ children }) => {
             <Header
                 title={data.site.siteMetadata.title}
                 mailHref={"mailto:" + data.site.siteMetadata.websiteMail}
-                twitterHref={data.site.siteMetadata.twitterUrl}
+                // twitterHref={data.site.siteMetadata.twitterUrl}
             />
             <main>{children}</main>
         </>
