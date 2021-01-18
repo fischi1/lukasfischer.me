@@ -9,7 +9,7 @@ const MailIcon: FC<Props> = ({ color = "var(--white)" }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="32"
+            width="36"
             height="16.891"
             version="1.1"
             viewBox="0 0 5.588 4.469"

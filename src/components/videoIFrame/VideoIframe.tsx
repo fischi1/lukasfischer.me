@@ -11,7 +11,7 @@ type Props = {
 const VideoIframe: FC<Props> = ({ className, src }) => (
     <div className={clsx("video-iframe", className)}>
         <AspectRatioDiv className="video-bg-container">
-            <iframe src={src} frameBorder={0} allowFullScreen></iframe>
+            <iframe src={src} frameBorder={0} allowFullScreen />
         </AspectRatioDiv>
     </div>
 )

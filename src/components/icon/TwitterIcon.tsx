@@ -9,7 +9,7 @@ const TwitterIcon: FC<Props> = ({ color = "var(--white)" }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="21.006"
+            width="36"
             height="17.081"
             version="1.1"
             viewBox="0 0 5.558 4.519"
