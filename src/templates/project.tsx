@@ -22,7 +22,7 @@ const ProjectTemplate: FC<PageProps<ProjectTemplateQuery>> = ({ data }) => {
 
     let imgArray = null
 
-    if (frontmatter?.images)
+    if (frontmatter?.images && frontmatter?.images.length > 0)
         imgArray = frontmatter?.images?.map(
             (img) => img?.childImageSharp?.fluid
         ) as any

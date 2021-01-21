@@ -5,11 +5,12 @@ import AspectRatioDiv from "../aspectRationDiv/AspectRatioDiv"
 import "./GalleryThumbnail.scss"
 
 type Props = {
+    index: number
     fluid: FluidObject
     onClick: () => void
 }
 
-const GalleryThumbnail: FC<Props> = ({ fluid, onClick }) => (
+const GalleryThumbnail: FC<Props> = ({ index, fluid, onClick }) => (
     <div
         className="gallery-thumbnail m-1"
         onClick={onClick}
@@ -19,9 +20,10 @@ const GalleryThumbnail: FC<Props> = ({ fluid, onClick }) => (
         <AspectRatioDiv ratio={2 / 3}>
             <BackgroundImage
                 Tag="div"
+                className="thumbnail-image"
                 fluid={fluid}
-                backgroundColor="#040507"
-                style={{ width: "100%", height: "100%" }}
+                role="button"
+                aria-label={`Open gallery image #${index + 1}`}
             />
         </AspectRatioDiv>
     </div>

@@ -2,6 +2,7 @@ import React, { FC } from "react"
 import Lightbox from "react-image-lightbox"
 import "react-image-lightbox/style.css"
 import Button from "../button/Button"
+import "./LightboxWrapper.scss"
 
 type Props = {
     open?: boolean
@@ -23,6 +24,7 @@ const LightboxWrapper: FC<Props> = ({
     return (
         <Lightbox
             mainSrc={images[imageIndex]}
+            imageTitle={`Gallery image #${imageIndex + 1}`}
             nextSrc={images[(imageIndex + 1) % images.length]}
             prevSrc={images[(imageIndex + images.length - 1) % images.length]}
             onCloseRequest={() => setOpen(false)}

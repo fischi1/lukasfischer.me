@@ -28,7 +28,6 @@ const Landing: FC<Props> = ({ fullHeight, children }) => {
         <BackgroundImage
             fluid={image}
             Tag="div"
-            backgroundColor="#040507"
             className={clsx("landing-component", {
                 "d-flex flex-column align-items-center justify-content-center landing-component-full-height": fullHeight
             })}

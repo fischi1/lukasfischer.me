@@ -3,7 +3,6 @@
 
 $white: #eef1ef;
 $black: #040507;
-$card-bg: #002642;
 
 $grad-color-1: #ffc914;
 $grad-color-2: #e4572e;
@@ -14,10 +13,6 @@ $body-color: $white;
 $font-family-sans-serif: "Montserrat", sans-serif;
 $headings-font-family: "Ubuntu", sans-serif;
 $line-height-base: 2;
-$card-border-color: none;
-$card-inner-border-radius: 0;
-$card-border-radius: 0;
-$card-cap-bg: $card-bg;
 $link-color: $grad-color-1;
 $input-btn-font-family: $headings-font-family;
 $btn-font-weight: 700;
@@ -27,3 +22,13 @@ $input-btn-padding-x: 0.5rem;
 $primary: $grad-color-1;
 
 @import "./bootstrap.scss";
+
+::-moz-selection {
+    color: $black;
+    background: #adf7b6;
+}
+
+::selection {
+    color: $black;
+    background: #adf7b6;
+}
