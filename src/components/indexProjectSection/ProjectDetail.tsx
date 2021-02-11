@@ -36,7 +36,7 @@ const ProjectDetail: FC<Props> = ({
             )}
         >
             <div className="project-image">
-                <Link to={slug} aria-label={`Read more about "${title}"`}>
+                <Link to={slug}>
                     <AspectRatioDiv ratio={2 / 3}>
                         {fluidImage && (
                             <GatsbyImage fluid={fluidImage} alt={title} />

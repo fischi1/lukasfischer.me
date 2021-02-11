@@ -22,13 +22,3 @@ $input-btn-padding-x: 0.5rem;
 $primary: $grad-color-1;
 
 @import "./bootstrap.scss";
-
-::-moz-selection {
-    color: $black;
-    background: #adf7b6;
-}
-
-::selection {
-    color: $black;
-    background: #adf7b6;
-}
