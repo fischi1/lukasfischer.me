@@ -34,6 +34,22 @@ module.exports = {
                 codegenDelay: 0
             }
         },
+        {
+            resolve: `gatsby-plugin-webfonts`,
+            options: {
+                fonts: {
+                    google: [
+                        {
+                            family: "Montserrat"
+                        },
+                        {
+                            family: "Ubuntu",
+                            variants: ["400", "500"]
+                        }
+                    ]
+                }
+            }
+        },
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
