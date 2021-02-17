@@ -4,11 +4,11 @@ import "./LandingContentIndex.scss"
 
 type Props = {}
 
-const LandingContentIndex: FC<Props> = props => (
+const LandingContentIndex: FC<Props> = ({}) => (
     <div id="landing-content-index">
         <div id="landing-text">
             <h1>
-                <span className="text-nowrap">I like</span>
+                <span className="text-nowrap">I enjoy</span>
                 <br />
                 <LandingContentAnimatedText />
             </h1>
@@ -19,21 +19,17 @@ const LandingContentIndex: FC<Props> = props => (
         >
             <div className="lead-container">
                 <p className="lead px-0">
-                    Front end
+                    Web
                     <br />
-                    Back end
-                    <br />
-                    Web development
+                    App development
                 </p>
             </div>
             <div id="separator">&nbsp;</div>
             <div className="lead-container">
                 <p className="lead text-right text-sm-left px-0">
-                    App development
+                    Front- & Backend
                     <br />
-                    Video games
-                    <br />
-                    Computer graphics
+                    Games
                 </p>
             </div>
         </div>
