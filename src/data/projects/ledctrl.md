@@ -1,6 +1,6 @@
 ---
 title: "LEDctrl"
-short: "Flutter app to control an addressable led strip"
+short: "Flutter app to control addressable leds"
 order: -1
 thumbnail: "../../images/project/ledctrl/ledctrl_overview.png"
 landing: { image: "../../images/project/ledctrl/ledctrl_overview.png" }
@@ -21,7 +21,15 @@ images:
     ]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vero repudiandae, ad, alias aspernatur blanditiis culpa placeat porro numquam autem molestias error similique earum deleniti voluptatibus nobis reprehenderit, laborum quas sed ipsam deserunt! Atque molestias, fugit officiis perferendis maxime aperiam ut tenetur doloremque impedit aspernatur? Impedit, ex. Deserunt tenetur nisi sit consectetur recusandae expedita doloremque maiores iure aliquam voluptatum, corrupti laboriosam doloribus odio soluta illum tempora, iste perferendis eligendi esse eveniet iusto laborum, cumque placeat? Eius unde nobis itaque ducimus magni qui ipsum, aperiam doloremque officia quasi corporis natus distinctio assumenda, a corrupti ullam reprehenderit amet minima fugiat saepe officiis! Atque vitae cupiditate officiis sint eos, perferendis ducimus dolore earum nihil ipsam, suscipit tempore delectus quidem corrupti asperiores? Tempore iusto totam quibusdam veritatis quaerat voluptatem cupiditate, dicta dignissimos est exercitationem saepe, consequuntur corporis a eligendi quisquam, ratione reprehenderit harum vero eos! Impedit reiciendis amet fugit aliquid facere laborum at necessitatibus tempora suscipit omnis, placeat illo, consectetur delectus ad quibusdam enim similique atque laudantium ipsum architecto repellendus eius hic. Sed impedit dolor voluptatibus, quasi doloremque incidunt inventore maiores voluptates optio, sit ipsum quam ratione fugiat laboriosam tenetur, illo doloribus magnam porro molestiae aliquam similique veniam est necessitatibus? Tenetur quae quibusdam non id blanditiis explicabo vero maxime perspiciatis ipsam incidunt suscipit ab aliquid, consequatur ducimus laborum
+**LEDctrl** is an app for controlling adressable led strips. Setup different color and effect profiles, switch between them or toggle the lights completely on/off.
+
+-   Create your own color compositions
+-   Choose from a selection of images based on your mood
+-   Select an effect and configure it to your liking (ping pong, scroboscope, rainbow)
+
+I chose this project to make myself familiar with Google's Flutter development framework for cross platform apps and the Dart programming language.
+
+Developed alongside this project was a Node.js backend that runs on a Raspberry Pi. The server application receives calls from the app and communicates with [RPI-WS2812-Server](https://github.com/tom-2015/rpi-ws2812-server), a low level application for controlling addressable led strips over a tcp connection.
 
 <bs-row>
 
@@ -29,7 +37,19 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vero repudiandae, a
 
 ## Technologies
 
--   [React](https://reactjs.org/)
+-   [Flutter](https://flutter.dev/)
+-   [bloc](https://bloclibrary.dev/)
+-   [Node.js](https://nodejs.org/)
+-   [RPI-WS2812-Server](https://github.com/tom-2015/rpi-ws2812-server)
+
+</bs-col>
+
+<bs-col>
+
+## Repositories
+
+-   [LEDctrl](https://github.com/fischi1/LEDctrl)
+-   [Node.js backend](https://github.com/fischi1/LEDctrl-backend)
 
 </bs-col>
 
