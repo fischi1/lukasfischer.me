@@ -13,7 +13,7 @@ export const onClientEntry = () => {
     console.log("%cHello 👋😃", styles)
     console.log("%cInterested in the source code? ⚛️", styles)
     console.log(
-        "%cCheck it out on github https://github.com/fischi1/lukasfischer.me",
+        "%cCheck it out on GitHub https://github.com/fischi1/lukasfischer.me",
         styles
     )
 }

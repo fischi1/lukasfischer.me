@@ -57,7 +57,7 @@ const ProjectDetail: FC<Props> = ({
                     <div>
                         {demo && (
                             <ButtonLink external className="mr-3" to={demo}>
-                                Demo
+                                Go to app
                             </ButtonLink>
                         )}
                         <ButtonLink to={slug}>More ...</ButtonLink>
