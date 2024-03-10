@@ -7,6 +7,7 @@
     "@types/react-helmet": "^6.1.0",
     "bootstrap": "^4.5.3",
     "clsx": "^1.1.1",
+    "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
     "gatsby-background-image": "^1.4.1",
@@ -35,8 +36,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop --host 0.0.0.0 --port 8000",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby develop --host 0.0.0.0 --port 8000",
     "clean": "gatsby clean",
     "deploy": "npm run clean && npm run build && node scripts/deploy.js"
   }
