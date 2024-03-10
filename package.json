@@ -39,6 +39,7 @@
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby build",
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby develop --host 0.0.0.0 --port 8000",
     "clean": "gatsby clean",
-    "deploy": "npm run clean && npm run build && node scripts/deploy.js"
+    "deploy": "npm run clean && npm run build && node scripts/deploy.js",
+    "postversion": "npm run deploy"
   }
 }
