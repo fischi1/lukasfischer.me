@@ -11,6 +11,7 @@ type Props = {
     title: string
     short: string
     demo?: string | null
+    noun?: string
     slug: string
     thumbnailFluidImage?: FluidObject
     thumbnailRaw?: string
@@ -22,6 +23,7 @@ const ProjectDetail: FC<Props> = ({
     title,
     short,
     demo,
+    noun,
     slug,
     thumbnailFluidImage,
     thumbnailRaw,
@@ -71,7 +73,7 @@ const ProjectDetail: FC<Props> = ({
                     <div>
                         {demo && (
                             <ButtonLink external className="mr-3" to={demo}>
-                                Go to app
+                                Go to {noun}
                             </ButtonLink>
                         )}
                         <ButtonLink to={slug}>More ...</ButtonLink>

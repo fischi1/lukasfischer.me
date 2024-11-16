@@ -1,6 +1,8 @@
 ---
 title: "Game Jam Entries"
 short: "My submissions for game jams"
+demo: "https://fishynator.itch.io"
+noun: "itch.io"
 order: 5
 thumbnail: "../../images/project/gameJamEntries/gamjamentries_thumb.png"
 landing:

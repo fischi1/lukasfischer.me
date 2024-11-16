@@ -3,6 +3,7 @@ title: "Notion Graph"
 short: "Visualize your Notion page structure"
 order: -2
 demo: "https://lukasfischer.me/notion-graph"
+noun: "web app"
 thumbnail: "../../images/project/notionGraph/notiongraph_thumb.png"
 landing: { image: "../../images/project/notionGraph/notiongraph_overview.png" }
 images:

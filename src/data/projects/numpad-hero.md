@@ -3,6 +3,7 @@ title: "Numpad Hero"
 short: "A rhythm game played with your numpad"
 order: 4
 demo: "https://fishynator.itch.io/numpad-hero"
+noun: game
 thumbnail: "../../images/project/numpadHero/icon32.png"
 landing: { image: "../../images/project/numpadHero/icon169.png" }
 images:

@@ -3,6 +3,7 @@ title: "Typing Web App"
 short: "Typing trainer made with React and Typescript"
 order: 1
 demo: "https://lukasfischer.me/typing-web-app"
+noun: "web app"
 thumbnail: "../../images/project/typingWebApp/typingWebApp-thumb.png"
 landing: { image: "../../images/project/typingWebApp/typingWebApp-11.png" }
 images:

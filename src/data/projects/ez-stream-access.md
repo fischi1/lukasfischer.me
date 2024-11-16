@@ -3,6 +3,7 @@ title: "EZ Stream Access"
 short: "Browser extension to open followed Twitch channels from a menu"
 order: -3
 demo: "https://chromewebstore.google.com/detail/ez-stream-access/jjnclaliegbplphbgdcjmcepdmjhpokm"
+noun: "extension"
 thumbnail: "../../images/project/ezStreamAccess/ezstreamaccess_overview.png"
 landing:
     { image: "../../images/project/ezStreamAccess/ezstreamaccess_overview.png" }

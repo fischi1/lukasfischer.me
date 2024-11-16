@@ -20,6 +20,7 @@ const ProjectSection: FC<Props> = () => {
                         title
                         short
                         demo
+                        noun
                         order
                         thumbnail {
                             childImageSharp {
@@ -74,6 +75,7 @@ const ProjectSection: FC<Props> = () => {
                         short={proj.frontmatter?.short ?? "Short missing"}
                         slug={proj.fields?.slug ?? "Slug missing"}
                         demo={proj.frontmatter?.demo}
+                        noun={proj.frontmatter?.noun ?? "Noun missing"}
                         thumbnailFluidImage={thumbnailFluidImage}
                         thumbnailRaw={thumnailRaw}
                         flipped={i % 2 === 1}
