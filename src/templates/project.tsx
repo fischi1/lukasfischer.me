@@ -14,8 +14,13 @@ const ProjectTemplate: FC<PageProps<ProjectTemplateQuery>> = ({ data }) => {
     const frontmatter = data.markdownRemark?.frontmatter
     const htmlAst = data.markdownRemark?.htmlAst
     const excerpt = data.markdownRemark?.excerpt
-    const thumbnailImage =
-        data.markdownRemark?.frontmatter?.thumbnail?.childImageSharp?.fluid?.src
+    /**
+     * Falling back to `publicURL` if the FluidImage isn't available.
+     * This is done so that a gif/avif thumbnail also works
+     */
+    const seoThumbnailImage =
+        data.markdownRemark?.frontmatter?.thumbnail?.childImageSharp?.fluid
+            ?.src ?? data.markdownRemark?.frontmatter?.thumbnail?.publicURL
     const slug = data.markdownRemark?.fields?.slug
 
     const title = frontmatter?.title ?? "Title missing"
@@ -32,7 +37,7 @@ const ProjectTemplate: FC<PageProps<ProjectTemplateQuery>> = ({ data }) => {
             <SEO
                 title={title}
                 description={excerpt}
-                image={thumbnailImage}
+                image={seoThumbnailImage}
                 slug={slug}
             />
             <Landing>
@@ -78,6 +83,7 @@ const query = graphql`
                             ...GatsbyImageSharpFluid
                         }
                     }
+                    publicURL
                 }
                 images {
                     childImageSharp {

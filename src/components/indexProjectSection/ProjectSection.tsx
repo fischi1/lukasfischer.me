@@ -33,6 +33,7 @@ const ProjectSection: FC<Props> = () => {
                                     ...GatsbyImageSharpFluid_withWebp
                                 }
                             }
+                            publicURL
                         }
                     }
                     fields {
@@ -54,23 +55,32 @@ const ProjectSection: FC<Props> = () => {
 
     return (
         <ProjectContainer>
-            {projects.map((proj, i) => (
-                <ProjectDetail
-                    key={proj.fields?.slug ?? "Slug missing"}
-                    title={proj.frontmatter?.title ?? "Title missing"}
-                    short={proj.frontmatter?.short ?? "Short missing"}
-                    slug={proj.fields?.slug ?? "Slug missing"}
-                    demo={proj.frontmatter?.demo}
-                    fluidImage={
-                        proj.frontmatter?.thumbnail !== null
-                            ? (proj.frontmatter?.thumbnail?.childImageSharp
-                                  ?.fluid as FluidObject)
-                            : undefined
-                    }
-                    flipped={i % 2 === 1}
-                    last={i === projects.length - 1}
-                />
-            ))}
+            {projects.map((proj, i) => {
+                const thumbnailFluidImage = proj.frontmatter?.thumbnail
+                    ?.childImageSharp?.fluid as FluidObject | undefined
+
+                /**
+                 * Falling back to `publicURL` if the FluidImage isn't available.
+                 * This is done so that a gif/avif thumbnail also works
+                 */
+                const thumnailRaw = !thumbnailFluidImage
+                    ? proj.frontmatter?.thumbnail?.publicURL!
+                    : ""
+
+                return (
+                    <ProjectDetail
+                        key={proj.fields?.slug ?? "Slug missing"}
+                        title={proj.frontmatter?.title ?? "Title missing"}
+                        short={proj.frontmatter?.short ?? "Short missing"}
+                        slug={proj.fields?.slug ?? "Slug missing"}
+                        demo={proj.frontmatter?.demo}
+                        thumbnailFluidImage={thumbnailFluidImage}
+                        thumbnailRaw={thumnailRaw}
+                        flipped={i % 2 === 1}
+                        last={i === projects.length - 1}
+                    />
+                )
+            })}
         </ProjectContainer>
     )
 }

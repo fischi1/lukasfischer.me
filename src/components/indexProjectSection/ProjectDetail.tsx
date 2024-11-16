@@ -12,7 +12,8 @@ type Props = {
     short: string
     demo?: string | null
     slug: string
-    fluidImage?: FluidObject
+    thumbnailFluidImage?: FluidObject
+    thumbnailRaw?: string
     flipped?: boolean
     last?: boolean
 }
@@ -22,7 +23,8 @@ const ProjectDetail: FC<Props> = ({
     short,
     demo,
     slug,
-    fluidImage,
+    thumbnailFluidImage,
+    thumbnailRaw,
     flipped,
     last
 }) => (
@@ -38,8 +40,20 @@ const ProjectDetail: FC<Props> = ({
             <div className="project-image">
                 <Link to={slug}>
                     <AspectRatioDiv ratio={2 / 3}>
-                        {fluidImage && (
-                            <GatsbyImage fluid={fluidImage} alt={title} />
+                        {thumbnailFluidImage && (
+                            <GatsbyImage
+                                fluid={thumbnailFluidImage}
+                                alt={title}
+                            />
+                        )}
+                        {thumbnailRaw && (
+                            <img
+                                src={thumbnailRaw}
+                                alt={title}
+                                width="100%"
+                                height="100%"
+                                style={{ objectFit: "cover" }}
+                            />
                         )}
                     </AspectRatioDiv>
                 </Link>
